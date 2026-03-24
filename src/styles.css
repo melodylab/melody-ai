@@ -1,41 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#splash img{
+/* ─── Design Tokens ──────────────────────────────────────────────── */
+:root {
+  --bg-cream:      #F5F0E8;
+  --bg-beige:      #EDE3D5;
+  --bg-sand:       #D9BFA3;
+  --coffee-light:  #8B6F5E;
+  --coffee:        #3B2E2A;
+  --coffee-dark:   #231B19;
+  --accent-amber:  #F59E0B;
+  --accent-amber-light: #FDE68A;
+  --text-dark:     #1C1917;
+  --text-muted:    #78716C;
+  --border-warm:   rgba(59,46,42,0.12);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Splash ─────────────────────────────────────────────────────── */
+#splash img {
   animation:
     splashIn .9s ease both,
     pulse 2.2s ease-in-out .9s infinite;
 }
-@keyframes pulse{
-  0%,100%{ transform:scale(1); filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
-  50%    { transform:scale(1.04); }
-}
-/* styles.css o global.css */
-.headline span {
-  display: inline-block;
+@keyframes pulse {
+  0%,100% { transform: scale(1);    filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
+  50%     { transform: scale(1.04); }
 }
 
-.headline .primary { color: #2E7D7A; }   /* teal */
-.headline .accent  { color: #E87D3E; }   /* naranja */
-.headline .neutral { color: #4B2E2B; }   /* café oscuro */
+/* ─── Global Typography ──────────────────────────────────────────── */
+.headline span { display: inline-block; }
+.headline .primary { color: var(--coffee); }
+.headline .accent  { color: var(--accent-amber); }
+.headline .neutral { color: var(--text-muted); }
 
-/* Bloquear scroll cuando el menú está abierto */
+/* ─── Utility: Text Gradient ─────────────────────────────────────── */
+.text-gradient-warm {
+  background: linear-gradient(135deg, var(--coffee-light) 0%, var(--accent-amber) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-ai {
+  background: linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #A855F7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────────── */
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold
+         transition-all duration-200 active:scale-[0.98];
+  background: var(--coffee-dark);
+  color: var(--bg-cream);
+  box-shadow: 0 1px 3px rgba(35,27,25,0.18);
+}
+.btn-primary:hover {
+  background: var(--coffee);
+  box-shadow: 0 4px 16px rgba(35,27,25,0.22);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-medium
+         transition-all duration-200 active:scale-[0.98];
+  border: 1px solid var(--border-warm);
+  color: var(--coffee);
+  background: transparent;
+}
+.btn-secondary:hover {
+  background: var(--bg-beige);
+  border-color: var(--coffee-light);
+}
+
+.btn-amber {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold
+         transition-all duration-200 active:scale-[0.98];
+  background: var(--accent-amber);
+  color: var(--coffee-dark);
+}
+.btn-amber:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(245,158,11,0.30);
+}
+
+/* ─── Cards ──────────────────────────────────────────────────────── */
+.card-warm {
+  background: white;
+  border: 1px solid var(--border-warm);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(59,46,42,0.06);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.card-warm:hover {
+  box-shadow: 0 8px 32px rgba(59,46,42,0.12);
+  transform: translateY(-2px);
+}
+
+/* ─── Tilt effect ────────────────────────────────────────────────── */
+.card-tilt {
+  transform: perspective(900px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0))
+             translateZ(var(--tz, 0));
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  will-change: transform;
+}
+.card-tilt:hover {
+  box-shadow: 0 20px 40px rgba(59,46,42,0.14), 0 0 0 1px rgba(255,255,255,0.04) inset;
+}
+
+/* ─── Bounce animation ───────────────────────────────────────────── */
+@keyframes bounceOnce {
+  0%, 100% { transform: translateY(0); }
+  30%      { transform: translateY(-8px); }
+  60%      { transform: translateY(4px); }
+}
+.bounce-once { animation: bounceOnce 0.6s ease-in-out; }
+
+/* ─── Scroll snap carousel ───────────────────────────────────────── */
+.snap-x   { scroll-snap-type: x mandatory; }
+.snap-child { scroll-snap-align: start; }
+
+/* ─── Lede text ──────────────────────────────────────────────────── */
+.lede { max-width: 68ch; }
+
+/* ─── Divider warm ───────────────────────────────────────────────── */
+.divider-warm {
+  border-top: 1px solid var(--border-warm);
+}
+
+/* ─── Mobile menu blur ───────────────────────────────────────────── */
 html.menu-open,
-html.menu-open body {
-  overflow: hidden;
-}
+html.menu-open body { overflow: hidden; }
 
-/* BLUR solo al contenido principal (debajo del header) */
 html.menu-open #app-content {
   filter: blur(6px);
   transition: filter 160ms ease;
-  pointer-events: none; /* evita clics detrás del overlay */
+  pointer-events: none;
 }
 
-/* Asegura que header y panel móvil NO se blureen */
 html.menu-open header,
 html.menu-open #mobile-menu,
-html.menu-open .ignore-blur {
-  filter: none !important;
+html.menu-open .ignore-blur { filter: none !important; }
+
+/* ─── Reveal animation on scroll ────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+
+/* ─── Section spacing helpers ────────────────────────────────────── */
+.section-gap { @apply py-16 lg:py-24; }
+.section-gap-sm { @apply py-10 lg:py-16; }
+.container-melody { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+/* ─── Tag / Chip ─────────────────────────────────────────────────── */
+.tag-warm {
+  @apply inline-block px-3 py-1 text-xs font-medium rounded-full;
+  background: var(--bg-beige);
+  color: var(--coffee);
+  border: 1px solid var(--border-warm);
+}
+.tag-amber {
+  @apply inline-block px-3 py-1 text-xs font-medium rounded-full;
+  background: rgba(245,158,11,0.12);
+  color: #92400E;
+  border: 1px solid rgba(245,158,11,0.20);
 }

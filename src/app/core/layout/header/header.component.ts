@@ -12,7 +12,11 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   open = false;
+  scrolled = false;
   private sub!: Subscription;
+
+  @HostListener('window:scroll')
+  onScroll() { this.scrolled = window.scrollY > 8; }
 
   constructor(private router: Router) {}
 

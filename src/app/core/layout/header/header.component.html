@@ -1,78 +1,115 @@
-<header class="fixed inset-x-0 top-0 z-[999] bg-[#D9BFA3] border-b border-black/10 shadow-sm">
+<header class="fixed inset-x-0 top-0 z-[999] border-b transition-all duration-300"
+        [class.header-scrolled]="scrolled"
+        style="background: var(--bg-sand); border-color: var(--border-warm);">
   <div class="max-w-7xl mx-auto px-4 md:px-6">
-    <div class="h-16 flex items-center justify-between">
-      <a routerLink="/" class="flex items-center gap-3">
-        <img src="assets/images/logo.png" alt="Melody" class="h-12 w-auto" />
-        <span class="text-xl font-semibold tracking-tight text-black">Melody</span>
+    <div class="h-16 flex items-center justify-between gap-6">
+
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-2.5 shrink-0">
+        <img src="assets/images/logo.png" alt="Melody" class="h-10 w-auto" />
+        <span class="text-lg font-bold tracking-tight" style="color: var(--coffee-dark);">Melody</span>
+        <span class="tag-amber hidden sm:inline-block">AI Company</span>
       </a>
 
-      <!-- Botón hamburguesa / X -->
+      <!-- Hamburguesa móvil -->
       <button
-        class="md:hidden inline-flex items-center justify-center p-2 rounded-xl bg-black/10 hover:bg-black/15 transition"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-xl transition"
+        style="background: rgba(59,46,42,0.08);"
         (click)="toggle()"
         [attr.aria-expanded]="open"
         aria-controls="mobile-menu"
         aria-label="Toggle menú"
       >
-        <svg class="h-6 w-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <svg class="h-5 w-5" style="color: var(--coffee-dark);" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path *ngIf="!open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          <path *ngIf="open" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          <path *ngIf="open"  stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
 
-      <!-- Menú desktop -->
-      <nav class="hidden md:flex items-center gap-8">
+      <!-- Nav desktop -->
+      <nav class="hidden md:flex items-center gap-1 flex-1 justify-center">
         <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-           routerLinkActive="text-black font-semibold"
-           class="text-lg text-neutral-800 hover:text-black transition">Home</a>
+           routerLinkActive="nav-link-active"
+           class="nav-link">Inicio</a>
+        <a routerLink="/services"
+           routerLinkActive="nav-link-active"
+           class="nav-link">Servicios</a>
+        <a routerLink="/about"
+           routerLinkActive="nav-link-active"
+           class="nav-link">Nosotros</a>
+      </nav>
 
-        <a routerLink="/services" routerLinkActive="text-black font-semibold"
-           class="group text-lg text-neutral-800 hover:text-black transition flex items-center gap-1">
-          Services
-          <svg class="h-4 w-4 opacity-60 group-hover:opacity-100" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M5.5 7l4.5 4.5L14.5 7"/>
+      <!-- CTA desktop -->
+      <div class="hidden md:flex items-center gap-3 shrink-0">
+        <a routerLink="/contact" class="btn-primary text-sm py-2 px-4">
+          Agendar llamada
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
-
-        <a routerLink="/about" routerLinkActive="text-black font-semibold"
-           class="text-lg text-neutral-800 hover:text-black transition">About</a>
-
-        <a routerLink="/contact" routerLinkActive="text-black font-semibold"
-           class="text-lg text-neutral-800 hover:text-black transition">Contact</a>
-      </nav>
+      </div>
     </div>
   </div>
 
-  <!-- Overlay: oscurece y cierra al click (sin blur) -->
+  <!-- Overlay móvil -->
   <div
     *ngIf="open"
     class="fixed inset-x-0 top-16 bottom-0 z-[950] md:hidden bg-black/40"
     (click)="close()">
   </div>
 
-  <!-- Menú móvil flotante (sólido) -->
+  <!-- Menú móvil -->
   <div
     id="mobile-menu"
     *ngIf="open"
     class="fixed md:hidden top-16 inset-x-0 z-[960] px-4"
     role="dialog" aria-modal="true"
   >
-    <div class="rounded-2xl border border-black/10 bg-[#e3cdb8] shadow-2xl ring-1 ring-black/5">
-      <nav class="flex flex-col divide-y divide-black/5 py-2">
+    <div class="rounded-2xl border shadow-warm-xl ring-1 overflow-hidden"
+         style="background: var(--bg-beige); border-color: var(--border-warm); ring-color: var(--border-warm);">
+      <nav class="flex flex-col divide-y" style="border-color: var(--border-warm);">
         <a routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-           routerLinkActive="text-black font-semibold"
+           routerLinkActive="font-semibold"
            (click)="close()"
-           class="px-4 py-3 text-lg text-neutral-900 hover:bg-black/5 rounded-t-2xl transition">Home</a>
-        <a routerLink="/services" routerLinkActive="text-black font-semibold"
+           class="px-5 py-3.5 text-base transition hover:bg-black/5"
+           style="color: var(--coffee-dark);">Inicio</a>
+        <a routerLink="/services" routerLinkActive="font-semibold"
            (click)="close()"
-           class="px-4 py-3 text-lg text-neutral-900 hover:bg-black/5 transition">Services</a>
-        <a routerLink="/about" routerLinkActive="text-black font-semibold"
+           class="px-5 py-3.5 text-base transition hover:bg-black/5"
+           style="color: var(--coffee-dark);">Servicios</a>
+        <a routerLink="/about" routerLinkActive="font-semibold"
            (click)="close()"
-           class="px-4 py-3 text-lg text-neutral-900 hover:bg-black/5 transition">About</a>
-        <a routerLink="/contact" routerLinkActive="text-black font-semibold"
+           class="px-5 py-3.5 text-base transition hover:bg-black/5"
+           style="color: var(--coffee-dark);">Nosotros</a>
+        <a routerLink="/contact"
            (click)="close()"
-           class="px-4 py-3 text-lg text-neutral-900 hover:bg-black/5 rounded-b-2xl transition">Contact</a>
+           class="mx-4 my-3 btn-primary text-sm text-center justify-center">
+          Agendar llamada →
+        </a>
       </nav>
     </div>
   </div>
 </header>
+
+<style>
+  .nav-link {
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.625rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--coffee);
+    transition: background 150ms ease, color 150ms ease;
+  }
+  .nav-link:hover {
+    background: rgba(59,46,42,0.08);
+    color: var(--coffee-dark);
+  }
+  .nav-link-active {
+    background: rgba(59,46,42,0.10) !important;
+    color: var(--coffee-dark) !important;
+    font-weight: 600 !important;
+  }
+  .header-scrolled {
+    box-shadow: 0 2px 12px rgba(59,46,42,0.12);
+  }
+</style>

@@ -1,322 +1,503 @@
-<section class="relative bg-[#232425] py-0">
-  <div class="w-full">
-    <figure  class="relative w-full overflow-hidden h-[420px] sm:h-[480px] md:h-[560px] lg:h-[640px]">
-      <!-- Imagen -->
-      <img
-        src="assets/images/hero-melody.png"
-        alt="Hero Melody"
-        class="absolute inset-0 w-full h-full object-cover object-center"
-        width="1600" height="900"
-      />
-      <div class="absolute inset-0 bg-black/70 z-10"></div>
+<!-- ══════════════════════════════════════════════════
+     HERO — Full-screen, tipografía masiva
+═══════════════════════════════════════════════════ -->
+<section
+  class="relative overflow-hidden"
+  style="
+    background: var(--coffee-dark);
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding-top: 5rem;
+  "
+>
+  <!-- Noise grain texture (SVG filter) -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+       style="
+         background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E&quot;);
+         opacity: 0.055;
+         mix-blend-mode: overlay;
+       "></div>
 
-      <div
-        class="pointer-events-none absolute inset-0 z-20"
+  <!-- Gradiente multi-capa -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+       style="
+         background:
+           radial-gradient(ellipse 90% 55% at 50% -5%, rgba(245,158,11,0.22) 0%, transparent 65%),
+           radial-gradient(ellipse 50% 35% at 85% 80%, rgba(245,158,11,0.08) 0%, transparent 60%),
+           radial-gradient(ellipse 40% 30% at 10% 90%, rgba(120,80,40,0.12) 0%, transparent 55%);
+       "></div>
+
+  <!-- Grid decorativo -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+       style="
+         background-image: linear-gradient(rgba(237,227,213,0.04) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(237,227,213,0.04) 1px, transparent 1px);
+         background-size: 64px 64px;
+         mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+       "></div>
+
+  <div class="relative container-melody text-center max-w-5xl mx-auto px-4">
+
+    <!-- Badge pulsante -->
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-10"
+         style="background: rgba(245,158,11,0.12); color: #FCD34D; border: 1px solid rgba(245,158,11,0.22);">
+      <span class="h-1.5 w-1.5 rounded-full animate-pulse inline-block" style="background: #F59E0B;"></span>
+      AI Company · Ecuador
+    </div>
+
+    <!-- Headline principal -->
+    <h1
+      class="font-extrabold tracking-tight leading-[1.0] mb-8"
+      style="
+        font-size: clamp(3rem, 9vw, 7rem);
+        color: var(--bg-cream);
+        letter-spacing: -0.03em;
+      "
+    >
+      Sistemas que<br>
+      <span
         style="
-          --bg: rgb(35, 36, 37);
-          --fade: 28px;
-          background:
-            linear-gradient(to right,
-              var(--bg) 0,
-              rgba(0,0,0,0) var(--fade),
-              rgba(0,0,0,0) calc(100% - var(--fade)),
-              var(--bg) 100%
-            ),
-            linear-gradient(to bottom,
-              var(--bg) 0,
-              rgba(0,0,0,0) var(--fade),
-              rgba(0,0,0,0) calc(100% - var(--fade)),
-              var(--bg) 100%
-            );
-        ">
-      </div>
+          background: linear-gradient(90deg, #F59E0B 0%, #FCD34D 50%, #F59E0B 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        "
+      >piensan, deciden</span><br>
+      y evolucionan.
+    </h1>
 
-      <figcaption class="absolute inset-0 z-30 flex items-center justify-center">
-        <div class="px-6 text-center">
-          <h1 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow">
-            “Software inteligente para un mundo conectado”
-          </h1>
-          <p class="mt-3 text-neutral-200 text-base md:text-lg/relaxed max-w-2xl mx-auto">
-            Transformamos ideas en productos digitales con IA, chatbots y soluciones a medida.
-          </p>
+    <!-- Bajada -->
+    <p
+      class="mx-auto mb-12 text-lg leading-relaxed"
+      style="color: rgba(237,227,213,0.55); max-width: 52ch;"
+    >
+      Melody transforma tus procesos en sistemas inteligentes que trabajan solos.
+      Inteligencia artificial, automatización y software a medida — integrados como uno.
+    </p>
 
-          <!-- Chip opcional con blur -->
-          <span
-            class="inline-block mt-5 px-4 py-2 rounded-xl text-sm text-white/95 bg-white/10"
-            style="backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
-            Hablemos de tu proyecto
-          </span>
-        </div>
-      </figcaption>
-    </figure>
-  </div>
-</section>
-
-
-
-
-
-<!-- HERO — editorial/limpio tipo Medium -->
-<section class="relative">
-  <div class="mx-auto max-w-7xl p-8 grid lg:grid-cols-2 gap-10">
-
-    <!-- ===== LADO IZQUIERDO: SOLO TEXTO DINÁMICO ===== -->
-    <div class="flex flex-col justify-center">
-      <p class="text-sm tracking-wide text-neutral-500 uppercase">AI Company · Melody</p>
-
-      <h1 class="mt-2 text-4xl/tight md:text-5xl/tight font-semibold headline">
-        {{ copy.title }}
-      </h1>
-      <p class="lede mt-5 text-[#4B2E2B]/80">{{ copy.lede }}</p>
-
-      <div class="mt-7 flex flex-wrap gap-3">
-        <a [routerLink]="copy.link" class="btn-primary">{{ copy.cta }}</a>
-        <a routerLink="/services#integration" class="btn-secondary">Saber más</a>
-      </div>
-
-      <div class="mt-6 flex flex-wrap gap-3 text-xs text-neutral-500">
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='factory'">Integraciones</span>
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='factory'">APIs</span>
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='factory'">Escalabilidad</span>
-
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='ai'">Chatbots</span>
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='ai'">Automatización</span>
-        <span class="px-2.5 py-1 rounded-full border" *ngIf="scene==='ai'">Insights</span>
-      </div>
-    </div>
-
-    <!-- ===== LADO DERECHO: TOGGLE + ÚNICO VISOR 3D ===== -->
-    <div class="relative">
-      <!-- Toggle fuera y encima del contenedor (derecha) -->
-      <div class="absolute -top-6 right-2 z-20">
-        <div class="inline-flex rounded-full border bg-white/90 backdrop-blur p-1 shadow">
-          <button
-            class="px-3 py-1 text-xs md:text-sm rounded-full transition"
-            [class.bg-neutral-900]="scene==='factory'"
-            [class.text-white]="scene==='factory'"
-            (click)="setScene('factory')">
-            Fábrica
-          </button>
-          <button
-            class="px-3 py-1 text-xs md:text-sm rounded-full transition"
-            [class.bg-neutral-900]="scene==='ai'"
-            [class.text-white]="scene==='ai'"
-            (click)="setScene('ai')">
-            Productos IA
-          </button>
-        </div>
-      </div>
-
-      <!-- ÚNICO contenedor 3D -->
-      <div class="rounded-3xl border border-neutral-200/70 bg-white/60 backdrop-blur p-3 md:p-4 relative overflow-hidden">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden relative bg-transparent">
-
-          <!-- 3D o Fallback -->
-          <ng-container *ngIf="can3D; else fallback3d">
-            <div *ngIf="!loaded" class="absolute inset-0 animate-pulse bg-neutral-200/40"></div>
-            <iframe
-              [src]="safeUrl"
-              title="Escena 3D - Melody"
-              class="w-full h-full border-0"
-              loading="lazy"
-              allow="autoplay; fullscreen; xr-spatial-tracking"
-              allowfullscreen
-              (load)="loaded = true">
-            </iframe>
-          </ng-container>
-
-          <ng-template #fallback3d>
-            <img
-              [src]="scene==='factory' ? 'assets/images/dev1.png' : 'assets/images/chatbot1.png'"
-              [alt]="scene==='factory' ? 'Fábrica de software' : 'Productos con IA'"
-              class="w-full h-full object-cover">
-          </ng-template>
-
-          <!-- CTA dinámico dentro del visor -->
-          <div class="absolute bottom-2 left-2">
-            <a
-              [routerLink]="scene==='factory' ? '/services' : '/products'"
-              class="px-3 py-1 text-xs rounded-md bg-white/80 backdrop-blur border hover:bg-white">
-              {{ scene==='factory' ? 'Ver servicios' : 'Ver productos' }}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Badge inferior -->
-      <div class="absolute -bottom-6 -right-6 bg-white/60 backdrop-blur rounded-xl border px-4 py-3 shadow-sm">
-        <p class="text-sm">Tiempo medio de implementación</p>
-        <p class="text-xl font-semibold">2–6 semanas</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SUBPRODUCTOS — cards con tilt ligero -->
-<section class="py-14 lg:py-20 bg-neutral-50/60">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end justify-between gap-4">
-      <h2 class="text-2xl md:text-3xl font-semibold">Qué construimos</h2>
+    <!-- CTAs -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-20">
+      <a routerLink="/contact" class="btn-amber px-8 py-4 text-base font-bold">
+        Agendar llamada →
+      </a>
       <a
         routerLink="/services"
-        class="text-sm text-neutral-600 hover:text-black"
-        >Ver todos →</a
+        class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all"
+        style="color: rgba(237,227,213,0.70); border: 1px solid rgba(237,227,213,0.15); backdrop-filter: blur(8px);"
       >
-    </div>
-
-    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Chatbot -->
-      <article
-        class="group relative rounded-2xl border bg-white p-6 card-tilt"
-        (mousemove)="onCardMove($event, 0)"
-        (mouseleave)="onCardLeave($event, 0)"
-      >
-        <div
-          class="h-28 rounded-xl bg-gradient-to-tr from-emerald-200 to-emerald-50 mb-5"
-        ></div>
-        <h3 class="text-lg font-semibold">Chatbot Conversacional</h3>
-        <p class="mt-2 text-sm text-neutral-600">
-          Atención 24/7, captura de leads, integración con WhatsApp/Web, y
-          handoff humano cuando se necesita.
-        </p>
-        <div class="mt-4 flex items-center gap-2 text-xs text-neutral-500">
-          <span class="px-2 py-1 rounded-full border">NLU</span>
-          <span class="px-2 py-1 rounded-full border">Analytics</span>
-          <span class="px-2 py-1 rounded-full border">WhatsApp</span>
-        </div>
-        <a
-          routerLink="/contact"
-          class="mt-5 inline-block text-sm font-medium underline underline-offset-4"
-          >Solicitar demo</a
-        >
-      </article>
-
-      <!-- Desarrollo a medida -->
-      <article
-        class="group relative rounded-2xl border bg-white p-6 card-tilt"
-        (mousemove)="onCardMove($event, 1)"
-        (mouseleave)="onCardLeave($event, 1)"
-      >
-        <div
-          class="h-28 rounded-xl bg-gradient-to-tr from-orange-200 to-orange-50 mb-5"
-        ></div>
-        <h3 class="text-lg font-semibold">Desarrollo & Integraciones</h3>
-        <p class="mt-2 text-sm text-neutral-600">
-          Apps web/móviles, microservicios, y BFFs. Integraciones con CRMs, ERPs
-          y pasarelas de pago.
-        </p>
-        <div class="mt-4 flex items-center gap-2 text-xs text-neutral-500">
-          <span class="px-2 py-1 rounded-full border">Angular</span>
-          <span class="px-2 py-1 rounded-full border">.NET / Kotlin</span>
-          <span class="px-2 py-1 rounded-full border">AWS/GCP</span>
-        </div>
-        <a
-          routerLink="/services"
-          class="mt-5 inline-block text-sm font-medium underline underline-offset-4"
-          >Ver capacidades</a
-        >
-      </article>
-
-      <!-- Data & IA -->
-      <article
-        class="group relative rounded-2xl border bg-white p-6 card-tilt"
-        (mousemove)="onCardMove($event, 2)"
-        (mouseleave)="onCardLeave($event, 2)"
-      >
-        <div
-          class="h-28 rounded-xl bg-gradient-to-tr from-fuchsia-200 to-fuchsia-50 mb-5"
-        ></div>
-        <h3 class="text-lg font-semibold">Automatización con IA</h3>
-        <p class="mt-2 text-sm text-neutral-600">
-          RAG, clasificación, extracción de datos y pipelines de ML listos para
-          producción.
-        </p>
-        <div class="mt-4 flex items-center gap-2 text-xs text-neutral-500">
-          <span class="px-2 py-1 rounded-full border">RAG</span>
-          <span class="px-2 py-1 rounded-full border">ETL</span>
-          <span class="px-2 py-1 rounded-full border">Observabilidad</span>
-        </div>
-        <a
-          routerLink="/about"
-          class="mt-5 inline-block text-sm font-medium underline underline-offset-4"
-          >Cómo trabajamos</a
-        >
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- “OUR WORK” — carrusel horizontal scroll-snap (inspiración portafolios) -->
-<section class="py-14 lg:py-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end justify-between gap-4">
-      <h2 class="text-2xl md:text-3xl font-semibold">Casos & demos</h2>
-      <div class="text-sm text-neutral-600">Desliza →</div>
-    </div>
-
-    <div class="mt-6 overflow-x-auto snap-x flex gap-6 pb-4">
-      <a
-        class="snap-child min-w-[280px] sm:min-w-[360px] lg:min-w-[420px] rounded-2xl overflow-hidden border bg-white hover:shadow-md transition"
-        routerLink="/our-work"
-      >
-        <div
-          class="h-48 bg-black/90 grid place-items-center text-white text-xl"
-        >
-          Demo Chatbot
-        </div>
-        <div class="p-4">
-          <p class="font-medium">Soporte y ventas 24/7</p>
-          <p class="text-sm text-neutral-600">WhatsApp + Web Widget</p>
-        </div>
-      </a>
-
-      <a
-        class="snap-child min-w-[280px] sm:min-w-[360px] lg:min-w-[420px] rounded-2xl overflow-hidden border bg-white hover:shadow-md transition"
-        routerLink="/our-work"
-      >
-        <div
-          class="h-48 bg-neutral-900 grid place-items-center text-white text-xl"
-        >
-          E‑commerce + IA
-        </div>
-        <div class="p-4">
-          <p class="font-medium">Buscador semántico</p>
-          <p class="text-sm text-neutral-600">RAG sobre catálogo</p>
-        </div>
-      </a>
-
-      <a
-        class="snap-child min-w-[280px] sm:min-w-[360px] lg:min-w-[420px] rounded-2xl overflow-hidden border bg-white hover:shadow-md transition"
-        routerLink="/our-work"
-      >
-        <div
-          class="h-48 bg-neutral-900 grid place-items-center text-white text-xl"
-        >
-          Automatización
-        </div>
-        <div class="p-4">
-          <p class="font-medium">Backoffice sin fricción</p>
-          <p class="text-sm text-neutral-600">Extracción de PDFs</p>
-        </div>
+        Ver servicios
       </a>
     </div>
-  </div>
-</section>
 
-<!-- CTA final -->
-<section class="py-14">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- 3 stats -->
     <div
-      class="rounded-3xl border bg-gradient-to-r from-neutral-50 to-white p-8 md:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
+      class="inline-flex items-center divide-x rounded-2xl mx-auto"
+      style="background: rgba(237,227,213,0.04); border: 1px solid rgba(237,227,213,0.08); divide-color: rgba(237,227,213,0.08);"
     >
-      <div>
-        <h3 class="text-2xl font-semibold">Hablemos de tu caso</h3>
-        <p class="mt-2 text-neutral-600 max-w-xl">
-          Te proponemos un roadmap claro y entregables rápidos. Sin humo.
+      <div class="px-8 py-4 text-center">
+        <p class="text-2xl font-bold" style="color: var(--bg-cream);">2 – 6</p>
+        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.40);">semanas promedio</p>
+      </div>
+      <div class="px-8 py-4 text-center" style="border-left: 1px solid rgba(237,227,213,0.08);">
+        <p class="text-2xl font-bold" style="color: var(--bg-cream);">100%</p>
+        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.40);">soluciones a medida</p>
+      </div>
+      <div class="px-8 py-4 text-center" style="border-left: 1px solid rgba(237,227,213,0.08);">
+        <p class="text-2xl font-bold" style="color: #F59E0B;">3</p>
+        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.40);">pilares: IA · Auto · Dev</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flecha scroll -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2" style="color: rgba(237,227,213,0.20);">
+    <svg class="h-5 w-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CLIENTES
+═══════════════════════════════════════════════════ -->
+<section class="py-12" style="background: var(--bg-beige); border-bottom: 1px solid var(--border-warm);">
+  <div class="container-melody">
+    <p class="text-center text-xs font-semibold uppercase tracking-widest mb-8" style="color: var(--coffee-light);">
+      Empresas que ya trabajan con Melody
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-x-14 gap-y-5">
+      <span class="text-sm font-bold opacity-50 hover:opacity-100 transition" style="color: var(--coffee-dark);">Ala Menestra</span>
+      <span class="text-sm font-bold opacity-50 hover:opacity-100 transition" style="color: var(--coffee-dark);">ChiliGums</span>
+      <span class="text-sm font-bold opacity-50 hover:opacity-100 transition" style="color: var(--coffee-dark);">VendeCorp</span>
+      <span class="text-sm font-bold opacity-50 hover:opacity-100 transition" style="color: var(--coffee-dark);">LogiPro</span>
+      <span class="text-sm font-bold opacity-50 hover:opacity-100 transition" style="color: var(--coffee-dark);">StorexAI</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     EL PROBLEMA — Statement editorial
+═══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-cream);">
+  <div class="container-melody max-w-4xl mx-auto reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-6" style="color: var(--coffee-light);">El problema</p>
+    <h2
+      class="font-extrabold leading-[1.1] mb-8"
+      style="font-size: clamp(2rem, 4.5vw, 3.5rem); color: var(--coffee-dark); letter-spacing: -0.025em;"
+    >
+      La mayoría de empresas<br>
+      <span style="color: var(--coffee-light); font-weight: 400; font-style: italic;">automatizan tareas.</span><br>
+      Nadie construye sistemas.
+    </h2>
+    <p class="text-base leading-relaxed max-w-2xl" style="color: var(--coffee-light);">
+      Un chatbot sin contexto, un pipeline sin inteligencia, un CRM desconectado — son herramientas aisladas. Melody diseña el ecosistema completo: IA que aprende, automatización que actúa y software que sostiene todo junto.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     SERVICIOS — 4 bloques horizontales estilo "feature row"
+═══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-beige);">
+  <div class="container-melody">
+    <div class="mb-14 reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Lo que construimos</p>
+      <h2
+        class="font-extrabold leading-tight"
+        style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+      >
+        Tres pilares. Un sistema.
+      </h2>
+    </div>
+
+    <!-- Grid 3 tarjetas grandes -->
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- IA -->
+      <div class="reveal reveal-delay-1 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
+           style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.07);">
+        <div class="absolute top-0 right-0 w-48 h-48 rounded-full pointer-events-none"
+             style="background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+        <div>
+          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(245,158,11,0.15);">
+            <svg class="h-5 w-5" style="color: #F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--bg-cream);">Inteligencia Artificial</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50);">
+            Chatbots conversacionales, RAG sobre tus documentos, clasificación automática y modelos que aprenden de tus datos operacionales.
+          </p>
+        </div>
+        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: #FCD34D;">
+          Ver servicio
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Automatización -->
+      <div class="reveal reveal-delay-2 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
+           style="background: white; border: 1px solid var(--border-warm);">
+        <div class="absolute -bottom-8 -right-8 w-40 h-40 rounded-full pointer-events-none"
+             style="background: radial-gradient(circle, rgba(59,46,42,0.06) 0%, transparent 70%);"></div>
+        <div>
+          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(59,46,42,0.08);">
+            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--coffee-dark);">Automatización</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+            Pipelines que extraen, transforman y enrutan información automáticamente. OCR, ETL, notificaciones y flujos de aprobación sin intervención humana.
+          </p>
+        </div>
+        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: var(--coffee-dark);">
+          Ver servicio
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Software -->
+      <div class="reveal reveal-delay-3 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
+           style="background: var(--bg-sand); border: 1px solid var(--border-warm);">
+        <div class="absolute top-0 right-0 w-40 h-40 rounded-full pointer-events-none"
+             style="background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%); transform: translate(20%, -20%);"></div>
+        <div>
+          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(59,46,42,0.10);">
+            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--coffee-dark);">Software a medida</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+            Aplicaciones web y móviles, microservicios, APIs e integraciones con CRM, ERP, pasarelas de pago y cualquier sistema que ya uses.
+          </p>
+        </div>
+        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: var(--coffee-dark);">
+          Ver servicio
+          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     MISIÓN Y VISIÓN — dos columnas editoriales
+═══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-cream);">
+  <div class="container-melody">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+      <!-- Misión -->
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Misión</p>
+        <h2
+          class="font-extrabold leading-[1.1] mb-6"
+          style="font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+        >
+          Convertir procesos complejos en sistemas que operan solos.
+        </h2>
+        <p class="text-base leading-relaxed" style="color: var(--coffee-light);">
+          No queremos ser un proveedor más de "digitalización". Queremos ser el equipo de IA que transforma cómo funciona tu negocio por dentro — mientras tú te enfocas en lo que importa.
         </p>
       </div>
-      <a routerLink="/contact" class="btn-primary">Agendar una llamada</a>
+
+      <!-- Visión + valores -->
+      <div class="reveal reveal-delay-2">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Visión</p>
+        <h2
+          class="font-extrabold leading-[1.1] mb-6"
+          style="font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+        >
+          Ser la empresa de IA de referencia en Latinoamérica.
+        </h2>
+        <p class="text-base leading-relaxed mb-10" style="color: var(--coffee-light);">
+          La IA de clase mundial no debería ser solo para grandes corporaciones. Melody existe para que los negocios que quieren crecer de verdad puedan competir con los mejores.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="h-px flex-1" style="background: var(--border-warm);"></div>
+            <span class="text-xs font-semibold uppercase tracking-widest shrink-0" style="color: var(--coffee-light);">Valores</span>
+            <div class="h-px flex-1" style="background: var(--border-warm);"></div>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-2xl p-4 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+              <p class="text-sm font-bold" style="color: var(--coffee-dark);">Entrega real</p>
+              <p class="text-xs mt-1" style="color: var(--coffee-light);">Sin promesas vacías</p>
+            </div>
+            <div class="rounded-2xl p-4 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+              <p class="text-sm font-bold" style="color: var(--coffee-dark);">Sistémico</p>
+              <p class="text-xs mt-1" style="color: var(--coffee-light);">Piezas que se conectan</p>
+            </div>
+            <div class="rounded-2xl p-4 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+              <p class="text-sm font-bold" style="color: var(--coffee-dark);">Humano</p>
+              <p class="text-xs mt-1" style="color: var(--coffee-light);">Tu equipo, nuestro equipo</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <a routerLink="/about" class="inline-flex items-center gap-1.5 text-sm font-semibold" style="color: var(--coffee-dark);">
+            Conocer Melody →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CASOS REALES
+═══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-beige);">
+  <div class="container-melody">
+
+    <div class="flex items-end justify-between gap-4 mb-12 reveal">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Casos reales</p>
+        <h2
+          class="font-extrabold leading-tight"
+          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+        >
+          Lo que hemos construido.
+        </h2>
+      </div>
+      <a routerLink="/contact" class="btn-secondary text-sm shrink-0 hidden sm:inline-flex">Hablar con nosotros →</a>
+    </div>
+
+    <!-- Lista tipo tabla editorial -->
+    <div class="space-y-0" style="border-top: 1px solid var(--border-warm);">
+
+      <!-- Caso 1 -->
+      <div class="reveal reveal-delay-1 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+           style="border-bottom: 1px solid var(--border-warm);">
+        <div class="flex items-center gap-5">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+               style="background: var(--coffee-dark); color: var(--bg-cream);">AM</div>
+          <div>
+            <h3 class="font-bold text-base" style="color: var(--coffee-dark);">Ala Menestra — Inventario Inteligente</h3>
+            <p class="text-sm" style="color: var(--coffee-light);">Sistema automatizado de stock con alertas de vencimiento y órdenes de compra</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="tag-amber">Automatización</span>
+          <span class="text-xs font-semibold" style="color: var(--coffee-light);">-80% trabajo manual</span>
+        </div>
+      </div>
+
+      <!-- Caso 2 -->
+      <div class="reveal reveal-delay-2 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+           style="border-bottom: 1px solid var(--border-warm);">
+        <div class="flex items-center gap-5">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+               style="background: #7C3AED; color: white;">CG</div>
+          <div>
+            <h3 class="font-bold text-base" style="color: var(--coffee-dark);">ChiliGums — Plataforma E-commerce</h3>
+            <p class="text-sm" style="color: var(--coffee-light);">App móvil + web con pagos, notificaciones push y panel admin en tiempo real</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="tag-warm">Desarrollo</span>
+          <span class="text-xs font-semibold" style="color: var(--coffee-light);">4 semanas</span>
+        </div>
+      </div>
+
+      <!-- Caso 3 -->
+      <div class="reveal reveal-delay-3 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+           style="border-bottom: 1px solid var(--border-warm);">
+        <div class="flex items-center gap-5">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+               style="background: #059669; color: white;">LP</div>
+          <div>
+            <h3 class="font-bold text-base" style="color: var(--coffee-dark);">LogiPro — Agente de Soporte 24/7</h3>
+            <p class="text-sm" style="color: var(--coffee-light);">Chatbot con IA que califica leads, responde consultas y hace handoff inteligente</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <span class="tag-amber">IA Conversacional</span>
+          <span class="text-xs font-semibold" style="color: var(--coffee-light);">3 semanas</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     PROCESO — 3 pasos numerados
+═══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-cream);">
+  <div class="container-melody">
+    <div class="max-w-xl mb-14 reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">El proceso</p>
+      <h2
+        class="font-extrabold leading-tight"
+        style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+      >
+        De la idea al sistema<br>en 3 pasos.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="reveal reveal-delay-1">
+        <div class="text-6xl font-extrabold mb-6 leading-none" style="color: rgba(59,46,42,0.08); font-feature-settings: 'tnum';">01</div>
+        <h3 class="text-lg font-bold mb-3" style="color: var(--coffee-dark);">Diagnóstico (30 min)</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">Entendemos tu operación, los cuellos de botella reales y qué procesos tienen más impacto si se automatizan o integran con IA.</p>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="text-6xl font-extrabold mb-6 leading-none" style="color: rgba(59,46,42,0.08); font-feature-settings: 'tnum';">02</div>
+        <h3 class="text-lg font-bold mb-3" style="color: var(--coffee-dark);">Propuesta & Roadmap</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">En 48 horas tienes un roadmap claro: entregables concretos, timeline real y costos transparentes. Sin humo, sin letra chica.</p>
+      </div>
+
+      <div class="reveal reveal-delay-3">
+        <div class="text-6xl font-extrabold mb-6 leading-none" style="color: rgba(59,46,42,0.08); font-feature-settings: 'tnum';">03</div>
+        <h3 class="text-lg font-bold mb-3" style="color: var(--coffee-dark);">Implementación</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">Sprint a sprint, con demos semanales. En 2 a 6 semanas tienes un sistema en producción que ya trabaja para tu negocio.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 reveal">
+      <a routerLink="/contact" class="btn-primary px-10 py-4 text-base">
+        Empezar el proceso →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     TESTIMONIO
+═══════════════════════════════════════════════════ -->
+<section class="section-gap-sm" style="background: var(--bg-beige);">
+  <div class="container-melody max-w-3xl mx-auto reveal">
+    <div class="rounded-3xl p-10 md:p-14" style="background: var(--coffee-dark);">
+      <svg class="h-7 w-7 mb-8 opacity-30" style="color: var(--bg-cream);" fill="currentColor" viewBox="0 0 32 32">
+        <path d="M10 8C6.7 8 4 10.7 4 14v10h10V14H7.3C7.7 11.6 9.7 9.6 12 9.1L10 8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6.7c.4-2.4 2.4-4.4 4.7-4.9L26 8z"/>
+      </svg>
+      <blockquote class="text-xl md:text-2xl font-bold leading-snug mb-8" style="color: var(--bg-cream);">
+        "Melody no solo nos entregó software. Nos entregó un sistema que literalmente trabaja solo mientras nosotros nos enfocamos en crecer."
+      </blockquote>
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-full flex items-center justify-center text-xs font-bold"
+             style="background: rgba(237,227,213,0.12); color: var(--bg-cream);">CV</div>
+        <div>
+          <p class="text-sm font-semibold" style="color: var(--bg-cream);">Carlos Vásquez</p>
+          <p class="text-xs" style="color: rgba(237,227,213,0.45);">Fundador · Ala Menestra</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     CTA FINAL — full-width oscuro
+═══════════════════════════════════════════════════ -->
+<section class="section-gap-sm" style="background: var(--coffee-dark);">
+  <div class="container-melody max-w-4xl mx-auto text-center reveal">
+
+    <div class="absolute inset-0 pointer-events-none"
+         style="background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(245,158,11,0.08) 0%, transparent 70%);"></div>
+
+    <h2
+      class="relative font-extrabold leading-[1.05] mb-6"
+      style="font-size: clamp(2rem, 5vw, 4rem); color: var(--bg-cream); letter-spacing: -0.03em;"
+    >
+      ¿Listo para construir<br>
+      <span style="color: #F59E0B;">algo inteligente?</span>
+    </h2>
+    <p class="relative mb-10 text-base max-w-xl mx-auto" style="color: rgba(237,227,213,0.50);">
+      Agenda 30 minutos. Te proponemos un roadmap claro con entregables reales. Sin compromiso, sin promesas vacías.
+    </p>
+    <div class="relative flex flex-wrap items-center justify-center gap-4">
+      <a routerLink="/contact" class="btn-amber px-10 py-4 text-base font-bold">
+        Agendar llamada →
+      </a>
+      <a routerLink="/services"
+         class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-medium text-sm transition-all"
+         style="color: rgba(237,227,213,0.55); border: 1px solid rgba(237,227,213,0.12);">
+        Ver servicios
+      </a>
     </div>
   </div>
 </section>

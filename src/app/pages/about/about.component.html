@@ -1,1 +1,157 @@
-<p>about works!</p>
+<!-- ═══════════════════════════════════════════════════
+     HERO — Nosotros
+══════════════════════════════════════════════════ -->
+<section
+  class="relative overflow-hidden"
+  style="background: var(--coffee-dark); padding-top: 7rem; padding-bottom: 5rem;"
+>
+  <div class="absolute inset-0 pointer-events-none"
+       style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E&quot;); opacity: 0.05; mix-blend-mode: overlay;"></div>
+  <div class="absolute inset-0 pointer-events-none"
+       style="background: radial-gradient(ellipse 80% 60% at 30% -10%, rgba(245,158,11,0.18) 0%, transparent 65%);"></div>
+
+  <div class="container-melody max-w-4xl mx-auto">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
+         style="background: rgba(245,158,11,0.12); color: #FCD34D; border: 1px solid rgba(245,158,11,0.22);">
+      Nosotros
+    </div>
+    <h1
+      class="font-extrabold tracking-tight leading-[1.05] mb-6"
+      style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--bg-cream); letter-spacing: -0.03em; max-width: 18ch;"
+    >
+      Tecnología<br>con propósito.
+    </h1>
+    <p class="text-lg leading-relaxed" style="color: rgba(237,227,213,0.55); max-width: 52ch;">
+      Somos un equipo de ingenieros y estrategas que transforma operaciones complejas en sistemas inteligentes que funcionan solos.
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     STATS rápidos
+══════════════════════════════════════════════════ -->
+<section style="background: var(--bg-beige); border-bottom: 1px solid var(--border-warm);">
+  <div class="container-melody">
+    <div class="grid grid-cols-2 md:grid-cols-4 divide-x" style="divide-color: var(--border-warm);">
+      <div class="px-6 py-8 text-center" *ngFor="let stat of stats">
+        <p class="font-extrabold text-3xl mb-1" [style.color]="stat.accent ? 'var(--accent-amber)' : 'var(--coffee-dark)'">{{stat.value}}</p>
+        <p class="text-xs" style="color: var(--coffee-light);">{{stat.label}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     QUIÉNES SOMOS — Historia editorial
+══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-cream);">
+  <div class="container-melody">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Por qué Melody existe</p>
+        <h2
+          class="font-extrabold leading-tight mb-6"
+          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+        >
+          No somos una agencia.<br>Somos un equipo de IA.
+        </h2>
+        <div class="space-y-4 text-base leading-relaxed" style="color: var(--coffee-light);">
+          <p>Melody nació para llenar un vacío real: las empresas en Latinoamérica necesitan sistemas inteligentes, no páginas web o chatbots aislados.</p>
+          <p>Diseñamos soluciones donde la IA, la automatización y el software trabajan juntos como un único sistema coherente — no como herramientas pegadas con cinta.</p>
+          <p>Trabajamos con negocios que quieren <em>transformar</em> cómo operan, no solo "digitalizar" algo. Eso nos hace selectivos y nos permite ser muy buenos en lo que hacemos.</p>
+        </div>
+      </div>
+
+      <!-- Principios como lista numerada -->
+      <div class="reveal reveal-delay-2 space-y-0" style="border-top: 1px solid var(--border-warm);">
+        <div *ngFor="let p of principles; let i = index"
+             class="flex gap-5 py-6"
+             [style.borderBottom]="'1px solid var(--border-warm)'">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0"
+               style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">0{{i+1}}</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">{{p.title}}</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">{{p.body}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     MISIÓN & VISIÓN
+══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-beige);">
+  <div class="container-melody">
+    <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+
+      <!-- Misión — dark -->
+      <div class="reveal rounded-3xl p-8 relative overflow-hidden"
+           style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
+        <div class="absolute top-0 right-0 pointer-events-none"
+             style="background: radial-gradient(ellipse 60% 60% at 100% 0%, rgba(245,158,11,0.10) 0%, transparent 70%); width: 200px; height: 200px;"></div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">Misión</p>
+        <p class="text-xl font-bold leading-snug mb-4" style="color: var(--bg-cream);">
+          Diseñamos e implementamos sistemas inteligentes que automatizan procesos y generan valor real en los negocios.
+        </p>
+      </div>
+
+      <!-- Visión — light -->
+      <div class="reveal reveal-delay-2 rounded-3xl p-8 relative overflow-hidden"
+           style="background: white; border: 1px solid var(--border-warm);">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Visión</p>
+        <p class="text-xl font-bold leading-snug mb-4" style="color: var(--coffee-dark);">
+          Ser el socio tecnológico de referencia para empresas que buscan aplicar inteligencia artificial de forma práctica, efectiva y escalable.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     VALORES
+══════════════════════════════════════════════════ -->
+<section class="section-gap" style="background: var(--bg-cream);">
+  <div class="container-melody">
+    <div class="mb-12 reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Cómo trabajamos</p>
+      <h2 class="font-extrabold leading-tight"
+          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+        Nuestra filosofía.
+      </h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div *ngFor="let valor of valores; let i = index"
+           class="reveal rounded-3xl p-7"
+           [class]="'reveal-delay-' + (i + 1)"
+           style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+        <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-5 text-xl">{{valor.icon}}</div>
+        <h3 class="font-bold mb-2" style="color: var(--coffee-dark);">{{valor.title}}</h3>
+        <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">{{valor.body}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CTA
+══════════════════════════════════════════════════ -->
+<section class="section-gap-sm" style="background: var(--coffee-dark);">
+  <div class="container-melody max-w-3xl mx-auto text-center reveal">
+    <h2 class="font-extrabold leading-tight mb-4"
+        style="font-size: clamp(1.75rem, 4vw, 3rem); color: var(--bg-cream); letter-spacing: -0.025em;">
+      ¿Quieres conocernos?
+    </h2>
+    <p class="text-base mb-8" style="color: rgba(237,227,213,0.50);">
+      Agenda una llamada de 30 minutos. Sin compromiso, sin presentaciones de ventas.
+    </p>
+    <a routerLink="/contact" class="btn-amber px-10 py-4 text-base font-bold">Hablar con el equipo →</a>
+  </div>
+</section>
