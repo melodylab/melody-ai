@@ -19,26 +19,26 @@ export class AboutComponent {
 
   principles = [
     {
-      title: 'Entregamos sistemas, no promesas',
-      body: 'Roadmaps claros, entregables concretos y timelines reales. Nada de meses de "descubrimiento" sin resultado tangible.'
+      title: 'Resultados en semanas, no en trimestres',
+      body: 'Cada proyecto tiene un entregable claro desde el día uno. Sin fases interminables de "descubrimiento", sin consultorías vacías — solo sistemas que funcionan.'
     },
     {
-      title: 'Pensamos en ecosistemas',
-      body: 'No construimos piezas aisladas. Diseñamos cómo la IA, la automatización y el software trabajan juntos como un sistema único.'
+      title: 'Sistemas, no piezas sueltas',
+      body: 'Diseñamos la IA, la automatización y el software como un ecosistema coherente. Cada componente amplifica al siguiente, no compite con él.'
     },
     {
-      title: 'Tu equipo es nuestro equipo',
-      body: 'No somos proveedores externos que entregan y desaparecen. Trabajamos con tu gente, entendemos tu contexto y nos comprometemos con el resultado.'
+      title: 'Nos comprometemos con el resultado, no con el alcance',
+      body: 'No somos proveedores que entregan y desaparecen. Nos quedamos, iteramos y aseguramos que lo que construimos genere impacto real en tu negocio.'
     },
     {
-      title: 'Tecnología que escala sola',
-      body: 'Construimos con arquitectura limpia, CI/CD y monitoreo desde el día 1 — para que lo que funciona hoy siga funcionando cuando tu negocio crezca x10.'
+      title: 'Construido para escalar desde el origen',
+      body: 'Arquitectura limpia, CI/CD y monitoreo desde el día 1. Lo que funciona hoy debe seguir funcionando cuando crezcas x10 — y lo hacemos posible desde el inicio.'
     },
   ];
 
   valores = [
-    { icon: '⚡', title: 'Velocidad sin sacrificar calidad', body: 'En 2 a 6 semanas tienes algo en producción, con calidad de ingeniería de primera.' },
-    { icon: '🧠', title: 'IA como herramienta, no como moda', body: 'Usamos IA donde realmente agrega valor. No forzamos soluciones donde no encajan.' },
-    { icon: '🤝', title: 'Transparencia total', body: 'Costos claros, timeline honesto, y comunicación directa durante todo el proceso.' },
+    { icon: '⚡', title: 'Velocidad con criterio', body: 'Entregamos en semanas porque tenemos claridad desde el inicio, no porque cortamos esquinas.' },
+    { icon: '🧠', title: 'IA aplicada, no decorativa', body: 'No usamos IA para parecer innovadores. La usamos donde cambia resultados concretos y medibles.' },
+    { icon: '🤝', title: 'Radical honesty', body: 'Timeline real, costos transparentes, y actualizaciones directas. Sin sorpresas al final del proyecto.' },
   ];
 }
