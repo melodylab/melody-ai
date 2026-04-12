@@ -56,25 +56,43 @@
           class="font-extrabold leading-tight mb-6"
           style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
         >
-          No somos una agencia.<br>Somos un equipo de IA.
+          La tecnología debe ayudarte a vender más, ordenar tu operación y trabajar mejor.
         </h2>
         <div class="space-y-4 text-base leading-relaxed" style="color: var(--coffee-light);">
-          <p>La mayoría de empresas en Latinoamérica saben que la IA es el futuro — pero no saben cómo llegar ahí sin desperdiciar tiempo, presupuesto, ni credibilidad interna.</p>
-          <p>Melody nació para resolver exactamente eso. Diseñamos sistemas donde la inteligencia artificial, la automatización y el software trabajan como un único organismo coherente — no como piezas desconectadas pegadas con cinta adhesiva.</p>
-          <p>Trabajamos con negocios que quieren <em>transformar</em> cómo operan, no solo agregar una herramienta más a su stack. Eso nos hace selectivos — y nos permite ser excepcionalmente buenos en lo que hacemos.</p>
+          <p style="text-align: justify;">En Melody ayudamos a los negocios a usar inteligencia artificial, automatización y software de forma útil, no complicada.</p>
+          <p style="text-align: justify;">Creamos sistemas que conectan procesos, reducen trabajo manual y permiten que el negocio funcione con más orden, más control y mejor atención al cliente.</p>
+          <p style="text-align: justify;">No se trata de meter tecnología por meter. Se trata de construir soluciones que realmente ayuden a que tu empresa crezca y opere mejor.</p>
         </div>
       </div>
 
-      <!-- Principios como lista numerada -->
+      <!-- Beneficios como lista numerada -->
       <div class="reveal reveal-delay-2 space-y-0" style="border-top: 1px solid var(--border-warm);">
-        <div *ngFor="let p of principles; let i = index"
-             class="flex gap-5 py-6"
-             [style.borderBottom]="'1px solid var(--border-warm)'">
-          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0"
-               style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">0{{i+1}}</div>
+        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">01</div>
           <div>
-            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">{{p.title}}</h3>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">{{p.body}}</p>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Menos trabajo manual</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Automatizamos tareas repetitivas para que tu equipo se enfoque en lo importante.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">02</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Más orden en tu negocio</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Conectamos procesos, información y herramientas para que todo trabaje mejor.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">03</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Mejor atención al cliente</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Diseñamos soluciones que ayudan a responder más rápido y dar una experiencia más clara.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">04</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Tecnología pensada para tu empresa</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">No usamos soluciones genéricas. Adaptamos cada sistema a la forma en que tu negocio realmente opera.</p>
           </div>
         </div>
       </div>
@@ -133,7 +151,7 @@
            style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
         <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-5 text-xl">{{valor.icon}}</div>
         <h3 class="font-bold mb-2" style="color: var(--coffee-dark);">{{valor.title}}</h3>
-        <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">{{valor.body}}</p>
+        <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">{{valor.body}}</p>
       </div>
     </div>
   </div>

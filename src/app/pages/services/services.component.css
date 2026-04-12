@@ -1,0 +1,68 @@
+/* ── Pipeline pasos: entra secuencialmente ── */
+.pipeline-step {
+  opacity: 0;
+  animation: pipelineIn 0.5s ease forwards;
+}
+
+@keyframes pipelineIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Mini-diálogo aparición ── */
+@keyframes fadePopIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.animate-fadein {
+  animation: fadePopIn 0.18s ease forwards;
+}
+
+/* ── Tech card tooltip overflow visible ── */
+.tech-card {
+  overflow: visible !important;
+}
+
+/* ── Flip cards ── */
+.flip-card {
+  cursor: pointer;
+}
+
+.flip-card .flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* ── Auto steps de automatización ── */
+.auto-step {
+  opacity: 0;
+  animation: autoStepIn 0.55s ease forwards;
+}
+
+@keyframes autoStepIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

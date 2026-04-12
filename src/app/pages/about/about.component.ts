@@ -11,16 +11,16 @@ import { RouterLink } from '@angular/router';
 })
 export class AboutComponent {
   stats = [
-    { value: '2–6', label: 'semanas de implementación', accent: false },
     { value: '100%', label: 'soluciones a medida', accent: true },
     { value: '3', label: 'pilares: IA · Auto · Dev', accent: false },
     { value: 'EC', label: 'con visión global', accent: false },
+    { value: '0', label: 'demos vacíos entregados', accent: false },
   ];
 
   principles = [
     {
-      title: 'Resultados en semanas, no en trimestres',
-      body: 'Cada proyecto tiene un entregable claro desde el día uno. Sin fases interminables de "descubrimiento", sin consultorías vacías — solo sistemas que funcionan.'
+      title: 'Entregables concretos desde el inicio',
+      body: 'Cada proyecto tiene un entregable claro definido desde antes de empezar. Sin fases interminables de "descubrimiento", sin consultorías vacías — solo sistemas que funcionan.'
     },
     {
       title: 'Sistemas, no piezas sueltas',
@@ -31,14 +31,14 @@ export class AboutComponent {
       body: 'No somos proveedores que entregan y desaparecen. Nos quedamos, iteramos y aseguramos que lo que construimos genere impacto real en tu negocio.'
     },
     {
-      title: 'Construido para escalar desde el origen',
-      body: 'Arquitectura limpia, CI/CD y monitoreo desde el día 1. Lo que funciona hoy debe seguir funcionando cuando crezcas x10 — y lo hacemos posible desde el inicio.'
+      title: 'Construido para escalar',
+      body: 'Arquitectura limpia, CI/CD y monitoreo. Lo que funciona debe seguir funcionando cuando crezcas — y lo hacemos posible desde el inicio.'
     },
   ];
 
   valores = [
-    { icon: '⚡', title: 'Velocidad con criterio', body: 'Entregamos en semanas porque tenemos claridad desde el inicio, no porque cortamos esquinas.' },
-    { icon: '🧠', title: 'IA aplicada, no decorativa', body: 'No usamos IA para parecer innovadores. La usamos donde cambia resultados concretos y medibles.' },
-    { icon: '🤝', title: 'Radical honesty', body: 'Timeline real, costos transparentes, y actualizaciones directas. Sin sorpresas al final del proyecto.' },
+    { icon: '⚡', title: 'Claridad', body: 'Entregamos con precisión porque tenemos claridad desde el inicio — no porque cortamos esquinas ni hacemos suposiciones.' },
+    { icon: '🧠', title: 'IA aplicada, no decorativa', body: 'No usamos IA para parecer innovadores. La usamos donde cambia resultados concretos y medibles en tu operación.' },
+    { icon: '🤝', title: 'Radical honesty', body: 'Costos transparentes, alcance honesto y actualizaciones directas. Sin sorpresas al final del proyecto.' },
   ];
 }
