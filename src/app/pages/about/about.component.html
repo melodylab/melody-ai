@@ -28,19 +28,6 @@
 </section>
 
 
-<!-- ═══════════════════════════════════════════════════
-     STATS rápidos
-══════════════════════════════════════════════════ -->
-<section style="background: var(--bg-beige); border-bottom: 1px solid var(--border-warm);">
-  <div class="container-melody">
-    <div class="grid grid-cols-2 md:grid-cols-4 divide-x" style="divide-color: var(--border-warm);">
-      <div class="px-6 py-8 text-center" *ngFor="let stat of stats">
-        <p class="font-extrabold text-3xl mb-1" [style.color]="stat.accent ? 'var(--accent-amber)' : 'var(--coffee-dark)'">{{stat.value}}</p>
-        <p class="text-xs" style="color: var(--coffee-light);">{{stat.label}}</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ═══════════════════════════════════════════════════
