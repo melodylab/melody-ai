@@ -51,13 +51,13 @@
 
 
 /* ═══════════════════════════════════════════════════════════
-   PILARES — tooltip al hover
+   PILARES — tooltip expandible dentro de la card
 ═══════════════════════════════════════════════════════════ */
 .pilar-card {
   transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
               box-shadow 0.25s ease,
               border-color 0.2s ease;
-  overflow: visible; /* necesario para que el tooltip salga */
+  overflow: hidden;   /* tooltip queda contenido, sin scroll */
 }
 .pilar-card:hover {
   transform: translateX(-4px);
@@ -65,57 +65,50 @@
 }
 .pilar-icon {
   transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  flex-shrink: 0;
 }
 .pilar-card:hover .pilar-icon {
   transform: rotate(-8deg) scale(1.18);
 }
 
-/* Tooltip base — dark (para tarjeta coffee-dark) */
+/* Tooltip — panel que se despliega debajo del texto */
 .pilar-tooltip {
-  /* posición: aparece a la derecha de la card */
-  position: absolute;
-  left: calc(100% + 12px);
-  top: 50%;
-  transform: translateY(-50%) translateX(6px);
-  width: 220px;
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: var(--coffee-dark);
-  border: 1px solid rgba(245,158,11,0.20);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.28), 0 0 0 1px rgba(245,158,11,0.08);
-  /* estado oculto */
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.22,1,0.36,1);
-  z-index: 50;
-}
-/* Pequeño triángulo/caret apuntando a la izquierda */
-.pilar-tooltip::before {
-  content: '';
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 6px solid transparent;
-  border-right-color: rgba(245,158,11,0.20);
+  transition: max-height 0.38s cubic-bezier(0.22,1,0.36,1),
+              opacity    0.28s ease,
+              padding    0.28s ease,
+              margin     0.28s ease;
+  padding-top: 0;
+  margin-top: 0;
+  /* sin posición absoluta — fluye dentro del flex */
+  width: 100%;
 }
 
-/* Tooltip light — para tarjetas beige claro */
-.pilar-tooltip--light {
-  background: var(--bg-cream);
-  border-color: var(--border-warm);
-  box-shadow: 0 12px 32px rgba(59,46,42,0.12);
-}
-.pilar-tooltip--light::before {
-  border-right-color: var(--border-warm);
-}
-
-/* Revelar al hover */
+/* Separador + contenido visible al hover */
 .pilar-card:hover .pilar-tooltip {
+  max-height: 140px;
   opacity: 1;
-  transform: translateY(-50%) translateX(0);
-  pointer-events: auto;
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid rgba(237,227,213,0.10);
 }
+
+/* Para las cards claras, el borde del tooltip va en tono warmth */
+.pilar-tooltip--light {
+  /* hereda todo — solo cambia el borde en el hover */
+}
+.pilar-card:hover .pilar-tooltip--light {
+  border-top-color: var(--border-warm);
+}
+
+/* El tooltip ocupa todo el ancho disponible (debajo del ícono + texto) */
+.pilar-card > .pilar-tooltip {
+  /* Salta el gap del ícono alineándose con el texto */
+  grid-column: 2;
+}
+
 
 
 /* ═══════════════════════════════════════════════════════════

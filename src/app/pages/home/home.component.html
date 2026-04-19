@@ -155,77 +155,82 @@
       <div class="reveal reveal-delay-2 space-y-3">
 
         <!-- Pilar 1 — IA -->
-        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
+        <div class="pilar-card rounded-2xl p-6 flex flex-col"
              style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
-          <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
-               style="background: rgba(245,158,11,0.15);">
-            <svg class="h-5 w-5" style="color:#F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
-            </svg>
+          <!-- Fila principal: icóno + texto -->
+          <div class="flex items-start gap-5">
+            <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+                 style="background: rgba(245,158,11,0.15);">
+              <svg class="h-5 w-5" style="color:#F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-bold mb-1" style="color: var(--bg-cream);">Inteligencia Artificial aplicada</p>
+              <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50);">
+                Agentes que atienden, responden y procesan — entrenados con el contexto real de tu negocio.
+              </p>
+            </div>
           </div>
-          <div class="flex-1">
-            <p class="text-sm font-bold mb-1" style="color: var(--bg-cream);">Inteligencia Artificial aplicada</p>
-            <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50);">
-              Agentes que atienden, responden y procesan — entrenados con el contexto real de tu negocio.
-            </p>
-          </div>
-          <!-- Tooltip -->
+          <!-- Tooltip expandible hacia abajo -->
           <div class="pilar-tooltip">
             <p class="text-xs font-semibold mb-1.5" style="color: #FCD34D;">¿Cómo funciona?</p>
-            <p class="text-xs leading-relaxed" style="color: rgba(237,227,213,0.78);">
+            <p class="text-xs leading-relaxed" style="color: rgba(237,227,213,0.75);">
               Entrenamos el agente con el contexto específico de tu empresa: productos, preguntas frecuentes, política de atención y flujos de escalamiento.
             </p>
-            <p class="text-xs mt-2 font-semibold" style="color: rgba(237,227,213,0.40);">WhatsApp · Web · Instagram</p>
+            <p class="text-xs mt-2 font-semibold" style="color: rgba(237,227,213,0.35);">WhatsApp · Web · Instagram</p>
           </div>
         </div>
 
         <!-- Pilar 2 — Automatización -->
-        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
+        <div class="pilar-card rounded-2xl p-6 flex flex-col"
              style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-          <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
-               style="background: rgba(59,46,42,0.08);">
-            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
-            </svg>
+          <div class="flex items-start gap-5">
+            <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+                 style="background: rgba(59,46,42,0.08);">
+              <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Automatización de procesos</p>
+              <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+                Lo que hoy hace una persona manualmente, mañana lo hace el sistema sin intervención.
+              </p>
+            </div>
           </div>
-          <div class="flex-1">
-            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Automatización de procesos</p>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
-              Lo que hoy hace una persona manualmente, mañana lo hace el sistema sin intervención.
-            </p>
-          </div>
-          <!-- Tooltip -->
           <div class="pilar-tooltip pilar-tooltip--light">
             <p class="text-xs font-semibold mb-1.5" style="color: var(--coffee-dark);">¿Qué se automatiza?</p>
             <p class="text-xs leading-relaxed" style="color: var(--coffee-light);">
               Notificaciones, actualizaciones de estado, reportes periódicos, derivaciones y flujos de aprobación — sin que nadie tenga que recordarlo.
             </p>
-            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.55;">N8N · Webhooks · APIs propias</p>
+            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.5;">N8N · Webhooks · APIs propias</p>
           </div>
         </div>
 
         <!-- Pilar 3 — Software -->
-        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
+        <div class="pilar-card rounded-2xl p-6 flex flex-col"
              style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-          <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
-               style="background: rgba(59,46,42,0.08);">
-            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
-            </svg>
+          <div class="flex items-start gap-5">
+            <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+                 style="background: rgba(59,46,42,0.08);">
+              <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Software que encaja en tu operación</p>
+              <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+                No adaptamos tu negocio al software. Construimos el software para tu negocio.
+              </p>
+            </div>
           </div>
-          <div class="flex-1">
-            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Software que encaja en tu operación</p>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
-              No adaptamos tu negocio al software. Construimos el software para tu negocio.
-            </p>
-          </div>
-          <!-- Tooltip -->
           <div class="pilar-tooltip pilar-tooltip--light">
             <p class="text-xs font-semibold mb-1.5" style="color: var(--coffee-dark);">¿Qué construimos?</p>
             <p class="text-xs leading-relaxed" style="color: var(--coffee-light);">
               Plataformas internas, portales de cliente, apps móviles y sistemas de gestión adaptados al modelo de negocio real de tu empresa.
             </p>
-            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.55;">Web · Móvil · API · Integraciones</p>
+            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.5;">Web · Móvil · API · Integraciones</p>
           </div>
         </div>
 
