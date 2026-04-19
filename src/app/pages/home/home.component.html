@@ -151,10 +151,11 @@
         </a>
       </div>
 
-      <!-- Derecha: 3 capacidades como rows de valor -->
+      <!-- Derecha: 3 capacidades con tooltip al hover -->
       <div class="reveal reveal-delay-2 space-y-3">
 
-        <div class="pilar-card rounded-2xl p-6 flex items-start gap-5"
+        <!-- Pilar 1 — IA -->
+        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
              style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
           <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
                style="background: rgba(245,158,11,0.15);">
@@ -162,15 +163,24 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
             </svg>
           </div>
-          <div>
+          <div class="flex-1">
             <p class="text-sm font-bold mb-1" style="color: var(--bg-cream);">Inteligencia Artificial aplicada</p>
             <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50);">
               Agentes que atienden, responden y procesan — entrenados con el contexto real de tu negocio.
             </p>
           </div>
+          <!-- Tooltip -->
+          <div class="pilar-tooltip">
+            <p class="text-xs font-semibold mb-1.5" style="color: #FCD34D;">¿Cómo funciona?</p>
+            <p class="text-xs leading-relaxed" style="color: rgba(237,227,213,0.78);">
+              Entrenamos el agente con el contexto específico de tu empresa: productos, preguntas frecuentes, política de atención y flujos de escalamiento.
+            </p>
+            <p class="text-xs mt-2 font-semibold" style="color: rgba(237,227,213,0.40);">WhatsApp · Web · Instagram</p>
+          </div>
         </div>
 
-        <div class="pilar-card rounded-2xl p-6 flex items-start gap-5"
+        <!-- Pilar 2 — Automatización -->
+        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
              style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
           <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
                style="background: rgba(59,46,42,0.08);">
@@ -178,15 +188,24 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
             </svg>
           </div>
-          <div>
+          <div class="flex-1">
             <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Automatización de procesos</p>
             <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
               Lo que hoy hace una persona manualmente, mañana lo hace el sistema sin intervención.
             </p>
           </div>
+          <!-- Tooltip -->
+          <div class="pilar-tooltip pilar-tooltip--light">
+            <p class="text-xs font-semibold mb-1.5" style="color: var(--coffee-dark);">¿Qué se automatiza?</p>
+            <p class="text-xs leading-relaxed" style="color: var(--coffee-light);">
+              Notificaciones, actualizaciones de estado, reportes periódicos, derivaciones y flujos de aprobación — sin que nadie tenga que recordarlo.
+            </p>
+            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.55;">N8N · Webhooks · APIs propias</p>
+          </div>
         </div>
 
-        <div class="pilar-card rounded-2xl p-6 flex items-start gap-5"
+        <!-- Pilar 3 — Software -->
+        <div class="pilar-card group relative rounded-2xl p-6 flex items-start gap-5"
              style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
           <div class="pilar-icon h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
                style="background: rgba(59,46,42,0.08);">
@@ -194,11 +213,19 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
             </svg>
           </div>
-          <div>
+          <div class="flex-1">
             <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Software que encaja en tu operación</p>
             <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
               No adaptamos tu negocio al software. Construimos el software para tu negocio.
             </p>
+          </div>
+          <!-- Tooltip -->
+          <div class="pilar-tooltip pilar-tooltip--light">
+            <p class="text-xs font-semibold mb-1.5" style="color: var(--coffee-dark);">¿Qué construimos?</p>
+            <p class="text-xs leading-relaxed" style="color: var(--coffee-light);">
+              Plataformas internas, portales de cliente, apps móviles y sistemas de gestión adaptados al modelo de negocio real de tu empresa.
+            </p>
+            <p class="text-xs mt-2 font-semibold" style="color: var(--coffee-light); opacity: 0.55;">Web · Móvil · API · Integraciones</p>
           </div>
         </div>
 
@@ -417,6 +444,26 @@
       <p class="text-base leading-relaxed" style="color: var(--coffee-light); max-width: 54ch; text-align: justify;">
         Antes de escribir una línea de código entendemos tu operación. El resultado es un sistema que ya sabe cómo trabaja tu empresa.
       </p>
+    </div>
+
+    <!-- Línea de proceso + dots conectores -->
+    <div class="process-track reveal mb-8">
+      <div class="process-dots">
+        <div class="process-dot process-dot--active">
+          <span class="process-dot-ring"></span>
+          <span class="process-dot-label">Diagnóstico</span>
+        </div>
+        <div class="process-line"><div class="process-line-fill"></div></div>
+        <div class="process-dot process-dot--mid">
+          <span class="process-dot-ring"></span>
+          <span class="process-dot-label">Diseño</span>
+        </div>
+        <div class="process-line"><div class="process-line-fill process-line-fill--delay"></div></div>
+        <div class="process-dot process-dot--end">
+          <span class="process-dot-ring"></span>
+          <span class="process-dot-label">Construcción</span>
+        </div>
+      </div>
     </div>
 
     <div class="grid md:grid-cols-3 gap-5">
