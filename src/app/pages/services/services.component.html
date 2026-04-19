@@ -5,27 +5,51 @@
   class="relative overflow-hidden"
   style="background: var(--coffee-dark); padding-top: 7rem; padding-bottom: 5rem;"
 >
-  <!-- Grain texture -->
   <div class="absolute inset-0 pointer-events-none"
        style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E&quot;); opacity: 0.05; mix-blend-mode: overlay;"></div>
   <div class="absolute inset-0 pointer-events-none"
-       style="background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,158,11,0.20) 0%, transparent 65%);"></div>
+       style="background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,158,11,0.18) 0%, transparent 65%);"></div>
 
-  <div class="container-melody max-w-4xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
+  <div class="container-melody max-w-4xl mx-auto">
+    <div class="anim-fade-up anim-delay-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
          style="background: rgba(245,158,11,0.12); color: #FCD34D; border: 1px solid rgba(245,158,11,0.22);">
-      Servicios
+      Lo que construimos
     </div>
     <h1
-      class="font-extrabold tracking-tight leading-[1.05] mb-6"
-      style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--bg-cream); letter-spacing: -0.03em;"
+      class="anim-fade-up anim-delay-2 font-extrabold tracking-tight leading-[1.05] mb-6"
+      style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--bg-cream); letter-spacing: -0.03em; max-width: 18ch;"
     >
-      No solo código.<br>
-      <span style="color: #F59E0B;">Inteligencia que opera.</span>
+      Soluciones reales para<br>
+      <span style="color: #F59E0B;">operaciones reales.</span>
     </h1>
-    <p class="text-base leading-relaxed mx-auto" style="color: rgba(237,227,213,0.55); max-width: 54ch;">
-      Cada solución que entregamos está diseñada para funcionar sola, escalar sola y mejorar sola. No son herramientas — son sistemas.
+    <p class="anim-fade-up anim-delay-3 text-base leading-relaxed"
+       style="color: rgba(237,227,213,0.55); max-width: 54ch;">
+      No vendemos piezas sueltas. Cada servicio está integrado con el siguiente para que tu empresa opere con más control, menos fricción y sin depender de procesos manuales.
     </p>
+
+    <!-- Nav anclas -->
+    <div class="anim-fade-up anim-delay-4 flex flex-wrap gap-3 mt-10">
+      <a href="#ia-conversacional"
+         class="px-4 py-2 rounded-xl text-xs font-semibold transition-all hover:bg-white/10"
+         style="border: 1px solid rgba(237,227,213,0.12); color: rgba(237,227,213,0.60);">
+        IA Conversacional
+      </a>
+      <a href="#automatizacion"
+         class="px-4 py-2 rounded-xl text-xs font-semibold transition-all hover:bg-white/10"
+         style="border: 1px solid rgba(237,227,213,0.12); color: rgba(237,227,213,0.60);">
+        Automatización
+      </a>
+      <a href="#desarrollo"
+         class="px-4 py-2 rounded-xl text-xs font-semibold transition-all hover:bg-white/10"
+         style="border: 1px solid rgba(237,227,213,0.12); color: rgba(237,227,213,0.60);">
+        Software a medida
+      </a>
+      <a href="#rag"
+         class="px-4 py-2 rounded-xl text-xs font-semibold transition-all hover:bg-white/10"
+         style="border: 1px solid rgba(237,227,213,0.12); color: rgba(237,227,213,0.60);">
+        IA Aplicada
+      </a>
+    </div>
   </div>
 </section>
 
@@ -37,76 +61,77 @@
   <div class="container-melody">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Left: copy -->
+      <!-- Copy -->
       <div class="reveal">
-        <h2 class="font-extrabold leading-tight mb-5" style="font-size: clamp(1.75rem,3.5vw,2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
-          Agentes de IA que atienden, responden y ayudan a vender.
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Agentes de IA</p>
+        <h2 class="font-extrabold leading-tight mb-5"
+            style="font-size: clamp(1.75rem,3.5vw,2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+          Tu negocio responde, vende y atiende.<br>
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">Sin que tu equipo esté disponible 24/7.</span>
         </h2>
         <p class="text-base leading-relaxed mb-8" style="color: var(--coffee-light); text-align: justify;">
-          Creamos agentes conversacionales para WhatsApp, web e Instagram que responden clientes, resuelven preguntas frecuentes, captan oportunidades y transfieren al equipo humano cuando hace falta.
+          Construimos agentes conversacionales para WhatsApp, web e Instagram entrenados con el contexto de tu negocio. Responden, califican oportunidades y escalan al equipo humano cuando es necesario.
         </p>
-        <div class="space-y-3 mb-10">
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Atienden clientes sin depender de horario</span>
+        <div class="space-y-0 mb-10" style="border-top: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Atienden sin depender de horario ni volumen</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Responden preguntas frecuentes al instante</span>
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Captan datos de clientes potenciales automáticamente</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Captan datos y oportunidades de venta</span>
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Detectan intención de compra y pasan el caso al equipo</span>
           </div>
-          <div class="flex items-center gap-3 py-3">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Se conectan con tu negocio y tu equipo</span>
+          <div class="flex items-center gap-3 py-3.5">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Operan en todos tus canales desde una sola lógica</span>
           </div>
         </div>
-        <a routerLink="/contact" class="btn-primary">Solicitar demo →</a>
+        <a routerLink="/contact"
+           class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+           style="background: var(--coffee-dark); color: var(--bg-cream);">
+          Quiero un agente para mi negocio →
+        </a>
       </div>
 
-      <!-- Right: bloques de valor real -->
+      <!-- Visual -->
       <div class="reveal reveal-delay-2 flex flex-col gap-4">
-        <!-- Card grande -->
-        <div class="rounded-2xl p-6" style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
+        <div class="rounded-2xl p-7" style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
           <p class="text-sm font-bold mb-2" style="color: var(--bg-cream);">Tu negocio responde mejor, incluso cuando tu equipo no está conectado.</p>
-          <p class="text-xs" style="color: rgba(237,227,213,0.45);">Sin depender de horarios ni de cuántos mensajes lleguen al mismo tiempo.</p>
+          <p class="text-xs leading-relaxed" style="color: rgba(237,227,213,0.42);">Sin depender de horarios ni de cuántos mensajes lleguen al mismo tiempo.</p>
         </div>
-        <!-- 2 mini cards -->
-        <div class="grid grid-cols-2 gap-4">
-          <div class="rounded-2xl p-5" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-2xl p-5 hover-lift" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
             <p class="text-xs font-bold mb-1" style="color: var(--coffee-dark);">Canales</p>
-            <p class="text-xs" style="color: var(--coffee-light);">WhatsApp, web e Instagram</p>
+            <p class="text-xs" style="color: var(--coffee-light);">WhatsApp · Web · Instagram</p>
           </div>
-          <div class="rounded-2xl p-5" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+          <div class="rounded-2xl p-5 hover-lift" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
             <p class="text-xs font-bold mb-1" style="color: var(--coffee-dark);">Funciones</p>
-            <p class="text-xs" style="color: var(--coffee-light);">Responder, captar, calificar, derivar</p>
+            <p class="text-xs" style="color: var(--coffee-light);">Responder · Captar · Calificar · Derivar</p>
           </div>
         </div>
-        <!-- Lista de qué puede hacer -->
-        <div class="rounded-2xl p-5" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+        <div class="rounded-2xl p-6" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
           <p class="text-xs font-semibold uppercase tracking-wider mb-4" style="color: var(--coffee-light);">Qué puede hacer por tu negocio</p>
-          <div class="space-y-3">
+          <div class="space-y-4">
             <div>
-              <p class="text-sm font-semibold" style="color: var(--coffee-dark);">Responder consultas frecuentes</p>
-              <p class="text-xs" style="color: var(--coffee-light);">Horarios, precios, productos, ubicaciones, disponibilidad.</p>
+              <p class="text-sm font-semibold mb-0.5" style="color: var(--coffee-dark);">Responder consultas frecuentes al instante</p>
+              <p class="text-xs" style="color: var(--coffee-light);">Horarios, precios, disponibilidad — sin que nadie tenga que contestar manualmente.</p>
             </div>
             <div>
-              <p class="text-sm font-semibold" style="color: var(--coffee-dark);">Captar clientes potenciales</p>
-              <p class="text-xs" style="color: var(--coffee-light);">Recoge nombre, necesidad y canal de contacto.</p>
+              <p class="text-sm font-semibold mb-0.5" style="color: var(--coffee-dark);">Captar clientes potenciales</p>
+              <p class="text-xs" style="color: var(--coffee-light);">Recoge nombre, necesidad y canal de contacto antes de escalar al equipo.</p>
             </div>
             <div>
-              <p class="text-sm font-semibold" style="color: var(--coffee-dark);">Calificar y derivar conversaciones</p>
-              <p class="text-xs" style="color: var(--coffee-light);">Detecta intención de compra y pasa el caso al equipo.</p>
-            </div>
-            <div>
-              <p class="text-sm font-semibold" style="color: var(--coffee-dark);">Atender en varios canales</p>
-              <p class="text-xs" style="color: var(--coffee-light);">WhatsApp, web e Instagram desde una misma lógica.</p>
+              <p class="text-sm font-semibold mb-0.5" style="color: var(--coffee-dark);">Calificar y derivar con contexto</p>
+              <p class="text-xs" style="color: var(--coffee-light);">Tu equipo recibe el caso con toda la información. Sin repetir preguntas.</p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -119,221 +144,230 @@
   <div class="container-melody">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Visual izquierdo: secuencia simple -->
-      <div class="reveal lg:order-1 order-1">
+      <!-- Visual pipeline animado -->
+      <div class="reveal lg:order-1 order-2">
         <div class="rounded-3xl p-8 relative overflow-hidden"
              style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
           <div class="absolute inset-0 pointer-events-none"
-               style="background: radial-gradient(ellipse 60% 40% at 80% 80%, rgba(245,158,11,0.08) 0%, transparent 60%);"></div>
-          <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">Así trabaja una automatización</p>
+               style="background: radial-gradient(ellipse 60% 40% at 80% 80%, rgba(245,158,11,0.07) 0%, transparent 60%);"></div>
+          <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">Cómo funciona una automatización</p>
 
-          <!-- Paso 1 — activo -->
           <div class="auto-step flex items-center gap-4" style="animation-delay: 0s;">
             <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
                  style="background: rgba(245,158,11,0.18); color: #F59E0B;">1</div>
             <div class="flex-1 rounded-lg px-4 py-2.5"
                  style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.20);">
-              <span class="text-sm" style="color: rgba(237,227,213,0.90);">Llega una solicitud</span>
+              <span class="text-sm font-medium" style="color: rgba(237,227,213,0.90);">Llega una solicitud o evento</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;"><div class="w-px h-4" style="background: rgba(245,158,11,0.25);"></div></div>
-
-          <!-- Paso 2 -->
+          <div class="flex" style="padding-left:15px; margin: 4px 0;">
+            <div class="w-px h-4" style="background: rgba(245,158,11,0.25);"></div>
+          </div>
           <div class="auto-step flex items-center gap-4" style="animation-delay: 0.6s;">
             <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
                  style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">2</div>
             <div class="flex-1 rounded-lg px-4 py-2.5"
                  style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se organiza la información</span>
+              <span class="text-sm" style="color: rgba(237,227,213,0.70);">El sistema organiza la información</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;"><div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div></div>
-
-          <!-- Paso 3 -->
+          <div class="flex" style="padding-left:15px; margin: 4px 0;">
+            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
+          </div>
           <div class="auto-step flex items-center gap-4" style="animation-delay: 1.2s;">
             <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
                  style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">3</div>
             <div class="flex-1 rounded-lg px-4 py-2.5"
                  style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se envía al responsable</span>
+              <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se envía al responsable correcto</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;"><div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div></div>
-
-          <!-- Paso 4 -->
+          <div class="flex" style="padding-left:15px; margin: 4px 0;">
+            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
+          </div>
           <div class="auto-step flex items-center gap-4" style="animation-delay: 1.8s;">
             <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
                  style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">4</div>
             <div class="flex-1 rounded-lg px-4 py-2.5"
                  style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se da seguimiento</span>
+              <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se registra y da seguimiento</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;"><div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div></div>
-
-          <!-- Paso 5 — resultado -->
+          <div class="flex" style="padding-left:15px; margin: 4px 0;">
+            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
+          </div>
           <div class="auto-step flex items-center gap-4" style="animation-delay: 2.4s;">
             <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(245,158,11,0.18); color: #F59E0B;">5</div>
+                 style="background: rgba(245,158,11,0.18); color: #F59E0B;">✓</div>
             <div class="flex-1 rounded-lg px-4 py-2.5"
                  style="background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.18);">
-              <span class="text-sm" style="color: rgba(237,227,213,0.90);">Se confirma el resultado</span>
+              <span class="text-sm font-semibold" style="color: rgba(237,227,213,0.90);">Resultado confirmado automáticamente</span>
             </div>
           </div>
 
           <div class="mt-6 pt-5" style="border-top: 1px solid rgba(237,227,213,0.07);">
-            <span class="text-xs font-semibold" style="color: #F59E0B;">Menos vueltas. Más control.</span>
+            <span class="text-xs font-bold" style="color: #F59E0B;">Tu equipo interviene solo donde agrega valor.</span>
           </div>
         </div>
       </div>
 
-      <!-- Derecho: copy -->
-      <div class="reveal reveal-delay-1 lg:order-2 order-2">
-        <h2 class="font-extrabold leading-tight mb-5" style="font-size: clamp(1.75rem,3.5vw,2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
-          Automatizamos tareas para que tu negocio funcione con más orden.
+      <!-- Copy -->
+      <div class="reveal reveal-delay-1 lg:order-2 order-1">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Automatización de procesos</p>
+        <h2 class="font-extrabold leading-tight mb-5"
+            style="font-size: clamp(1.75rem,3.5vw,2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+          Lo que hoy hace una persona<br>
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">mañana lo hace el sistema.</span>
         </h2>
         <p class="text-base leading-relaxed mb-8" style="color: var(--coffee-light); text-align: justify;">
-          Hacemos que procesos que hoy se hacen a mano se ejecuten de forma automática: recibir información, organizarla, enviarla al área correcta, dar seguimiento y avisar el resultado. Así tu equipo pierde menos tiempo, comete menos errores y puede enfocarse en lo que realmente mueve el negocio.
+          Conectamos las partes de tu operación que hoy se manejan a mano: recibir, clasificar, avisar, registrar y dar seguimiento. El resultado es menos error humano, más orden y un equipo enfocado en lo que importa.
         </p>
-        <div class="space-y-3 mb-10">
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+        <div class="space-y-0 mb-10" style="border-top: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Menos trabajo manual</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Menos trabajo manual en tu equipo</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Menos errores y olvidos</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Menos olvidos, menos errores, menos caos</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Más orden en la operación</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Registro automático de cada proceso</span>
           </div>
-          <div class="flex items-center gap-3 py-3">
+          <div class="flex items-center gap-3 py-3.5">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Mejor seguimiento de tareas y clientes</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Más control sin más personal</span>
           </div>
         </div>
-        <a routerLink="/contact" class="btn-primary">Ver cómo aplicaría en mi negocio →</a>
+        <a routerLink="/contact"
+           class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+           style="background: var(--coffee-dark); color: var(--bg-cream);">
+          Ver cómo aplicaría en mi negocio →
+        </a>
       </div>
+
     </div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════
-     SERVICIO 3 — Desarrollo a medida
+     SERVICIO 3 — Software a medida
 ══════════════════════════════════════════════════ -->
 <section id="desarrollo" class="section-gap" style="background: var(--bg-cream);">
   <div class="container-melody">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Left: copy -->
+      <!-- Copy -->
       <div class="reveal">
-        <h2 class="font-extrabold leading-tight mb-5" style="font-size: clamp(1.75rem,3.5vw,2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
-          Software a la medida para que tu negocio crezca con orden.
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Software a medida</p>
+        <h2 class="font-extrabold leading-tight mb-5"
+            style="font-size: clamp(1.75rem,3.5vw,2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+          No adaptamos tu negocio<br>al software.
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;"> Al revés.</span>
         </h2>
         <p class="text-base leading-relaxed mb-8" style="color: var(--coffee-light); text-align: justify;">
-          Creamos plataformas web y móviles que se adaptan a la forma en que tu empresa realmente trabaja. Conectamos procesos, centralizamos información y desarrollamos lo que hace falta para que tu operación sea más clara, más ágil y más escalable.
+          Construimos plataformas web y móviles diseñadas para la forma en que tu empresa trabaja. Sistemas que centralizan información, conectan áreas y te dan visibilidad real sobre tu operación — sin depender de hojas de cálculo ni de herramientas genéricas.
         </p>
-        <div class="space-y-3 mb-10">
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+        <div class="space-y-0 mb-10" style="border-top: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Sistemas hechos para tu operación</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Hecho para tu operación, no para otra empresa</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Integración con herramientas que ya usas</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Conecta con las herramientas que ya usas</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Más control sobre procesos y datos</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Escalable sin volver a construir desde cero</span>
           </div>
-          <div class="flex items-center gap-3 py-3">
+          <div class="flex items-center gap-3 py-3.5">
             <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(59,46,42,0.10); color: var(--coffee);">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Base sólida para crecer sin desorden</span>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Control total sobre tus datos y procesos</span>
           </div>
         </div>
-        <a routerLink="/contact" class="btn-primary">Ver opciones →</a>
+        <a routerLink="/contact"
+           class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+           style="background: var(--coffee-dark); color: var(--bg-cream);">
+          Explorar opciones →
+        </a>
       </div>
 
       <!-- Flip cards de capacidades -->
       <div class="reveal reveal-delay-2">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Pasa el cursor para ver el valor</p>
         <div class="grid grid-cols-3 gap-3">
 
-          <!-- 👥 Gestión de clientes -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">👥</span>
                 <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Gestión de clientes</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
                 <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Centraliza la información de tus clientes y mejora el seguimiento de cada oportunidad.</p>
               </div>
             </div>
           </div>
 
-          <!-- 📦 Pedidos y operaciones -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">📦</span>
-                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Pedidos y operaciones</span>
+                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Pedidos y flujos</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
-                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Organiza solicitudes, estados y tareas en un flujo más claro para tu equipo.</p>
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
+                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Organiza solicitudes, estados y tareas en un flujo claro para todo el equipo.</p>
               </div>
             </div>
           </div>
 
-          <!-- 📊 Inventario y control -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">📊</span>
-                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Inventario y control</span>
+                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Inventario</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
-                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Mantén visibilidad sobre productos, stock y movimientos para operar con menos errores.</p>
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
+                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Visibilidad sobre productos, stock y movimientos. Menos errores, más control.</p>
               </div>
             </div>
           </div>
 
-          <!-- 📈 Reportes y seguimiento -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">📈</span>
-                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Reportes y seguimiento</span>
+                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Reportes</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
-                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Convierte la actividad diaria de tu negocio en información útil para decidir mejor.</p>
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
+                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Convierte la actividad diaria en información útil para tomar mejores decisiones.</p>
               </div>
             </div>
           </div>
 
-          <!-- 🔗 Integraciones clave -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">🔗</span>
-                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Integraciones clave</span>
+                <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Integraciones</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
-                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Conecta tu sistema con pagos, WhatsApp, CRM y otras herramientas que ya usas.</p>
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
+                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Conectamos con pagos, WhatsApp, CRM y cualquier sistema que ya uses.</p>
               </div>
             </div>
           </div>
 
-          <!-- 🔐 Accesos y roles -->
           <div class="flip-card aspect-square" style="perspective: 700px;">
             <div class="flip-inner rounded-2xl w-full h-full relative" style="transform-style: preserve-3d; transition: transform 0.55s ease;">
-              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <div class="flip-front absolute inset-0 rounded-2xl flex flex-col items-center justify-center p-3 text-center" style="background: var(--bg-beige); border: 1px solid var(--border-warm); backface-visibility: hidden;">
                 <span class="text-2xl mb-1">🔐</span>
                 <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Accesos y roles</span>
               </div>
-              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
-                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Da a cada persona acceso solo a lo que necesita y mantén el control de la operación.</p>
+              <div class="flip-back absolute inset-0 rounded-2xl flex items-center justify-center p-3 text-center" style="background: var(--coffee-dark); border: 1px solid rgba(245,158,11,0.20); backface-visibility: hidden; transform: rotateY(180deg);">
+                <p class="text-xs leading-snug" style="color: rgba(237,227,213,0.85);">Cada persona accede solo a lo que necesita. Tu operación, protegida.</p>
               </div>
             </div>
           </div>
@@ -347,62 +381,82 @@
 
 
 <!-- ═══════════════════════════════════════════════════
-     SERVICIO 4 — RAG & IA Aplicada
+     SERVICIO 4 — IA Aplicada / RAG
 ══════════════════════════════════════════════════ -->
 <section id="rag" class="section-gap" style="background: var(--bg-beige);">
   <div class="container-melody">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
 
-      <!-- Visual izquierdo -->
-      <div class="reveal lg:order-1 order-1">
+      <!-- Visual -->
+      <div class="reveal lg:order-1 order-2">
         <div class="rounded-3xl p-8 relative overflow-hidden"
              style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
           <div class="absolute inset-0 pointer-events-none"
-               style="background: radial-gradient(ellipse 60% 50% at 20% 20%, rgba(245,158,11,0.10) 0%, transparent 60%);"></div>
-          <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">RAG — Retrieval Augmented Generation</p>
-          <!-- Diagrama visual simple -->
+               style="background: radial-gradient(ellipse 60% 50% at 20% 20%, rgba(245,158,11,0.09) 0%, transparent 60%);"></div>
+          <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">Cómo usa Melody tu conocimiento</p>
           <div class="space-y-3">
-            <div class="rounded-xl p-3 flex items-center gap-3" style="background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.15);">
-              <span style="color: #F59E0B;">📄</span>
-              <span class="text-xs" style="color: rgba(237,227,213,0.70);">Tus documentos, manuales, bases de datos…</span>
+            <div class="rounded-xl p-4 flex items-center gap-3"
+                 style="background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.15);">
+              <span style="color: #F59E0B; font-size: 1.1rem;">📄</span>
+              <div>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Tu base de conocimiento</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.40);">Documentos, manuales, catálogos, historial</p>
+              </div>
             </div>
-            <div class="text-center text-xs" style="color: rgba(237,227,213,0.20);">↓ vectorización</div>
-            <div class="rounded-xl p-3 flex items-center gap-3" style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span>🔍</span>
-              <span class="text-xs" style="color: rgba(237,227,213,0.70);">Búsqueda semántica sobre tu base de conocimiento</span>
+            <div class="text-center text-xs py-1" style="color: rgba(237,227,213,0.20);">↓ procesamos y vectorizamos</div>
+            <div class="rounded-xl p-4 flex items-center gap-3"
+                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
+              <span style="font-size: 1.1rem;">🔍</span>
+              <div>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Búsqueda semántica</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.40);">El modelo entiende el contexto, no solo palabras clave</p>
+              </div>
             </div>
-            <div class="text-center text-xs" style="color: rgba(237,227,213,0.20);">↓ respuesta contextual</div>
-            <div class="rounded-xl p-3 flex items-center gap-3" style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span>🤖</span>
-              <span class="text-xs" style="color: rgba(237,227,213,0.70);">Respuesta precisa, citando tu fuente de verdad</span>
+            <div class="text-center text-xs py-1" style="color: rgba(237,227,213,0.20);">↓ respuesta contextual</div>
+            <div class="rounded-xl p-4 flex items-center gap-3"
+                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
+              <span style="font-size: 1.1rem;">🤖</span>
+              <div>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Respuesta precisa y verificable</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.40);">Sin inventar. Citando tu fuente de verdad.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="reveal reveal-delay-1 lg:order-2 order-2">
-        <h2 class="font-extrabold leading-tight mb-5" style="font-size: clamp(1.75rem,3.5vw,2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
-          Tu conocimiento,<br>al instante.
+      <!-- Copy -->
+      <div class="reveal reveal-delay-1 lg:order-2 order-1">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">IA aplicada a tu negocio</p>
+        <h2 class="font-extrabold leading-tight mb-5"
+            style="font-size: clamp(1.75rem,3.5vw,2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+          La IA responde con<br>
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">el conocimiento de tu empresa.</span>
         </h2>
-        <p class="text-base leading-relaxed mb-8" style="color: var(--coffee-light);">
-          La IA más poderosa vale poco si no conoce tu negocio. Construimos sistemas RAG que conectan los modelos de lenguaje con tu base de conocimiento interna — para que respondan con precisión, en contexto y sin inventar.
+        <p class="text-base leading-relaxed mb-8" style="color: var(--coffee-light); text-align: justify;">
+          La IA más avanzada vale poco si no conoce tu negocio. Construimos sistemas que conectan los modelos de lenguaje con tu base de conocimiento interna — para que respondan con precisión, sin inventar y sin ambigüedad.
         </p>
-        <div class="space-y-3 mb-10">
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">RAG sobre documentos, PDFs, databases propias</span>
+        <div class="space-y-0 mb-10" style="border-top: 1px solid var(--border-warm);">
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">IA sobre tus documentos, PDFs y bases de datos propias</span>
           </div>
-          <div class="flex items-center gap-3 py-3" style="border-bottom: 1px solid var(--border-warm);">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Clasificación de tickets, emails, formularios y órdenes</span>
+          <div class="flex items-center gap-3 py-3.5" style="border-bottom: 1px solid var(--border-warm);">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Clasificación automática de tickets, formularios y órdenes</span>
           </div>
-          <div class="flex items-center gap-3 py-3">
-            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.15); color: #F59E0B;">✓</div>
-            <span class="text-sm" style="color: var(--coffee-dark);">Fine-tuning de modelos para tu dominio específico</span>
+          <div class="flex items-center gap-3 py-3.5">
+            <div class="h-5 w-5 rounded-full flex-shrink-0 flex items-center justify-center text-xs" style="background: rgba(245,158,11,0.12); color: #F59E0B;">✓</div>
+            <span class="text-sm font-medium" style="color: var(--coffee-dark);">Modelos ajustados al lenguaje y dominio de tu industria</span>
           </div>
         </div>
-        <a routerLink="/contact" class="btn-primary">Explorar solución →</a>
+        <a routerLink="/contact"
+           class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:opacity-90"
+           style="background: var(--coffee-dark); color: var(--bg-cream);">
+          Explorar esta solución →
+        </a>
       </div>
+
     </div>
   </div>
 </section>
@@ -411,29 +465,29 @@
 <!-- CTA final -->
 <section class="section-gap-sm" style="background: var(--coffee-dark);">
   <div class="container-melody max-w-3xl mx-auto text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">El siguiente paso</p>
     <h2 class="font-extrabold leading-tight mb-4"
         style="font-size: clamp(1.75rem, 4vw, 3rem); color: var(--bg-cream); letter-spacing: -0.025em;">
-      ¿Por dónde empezamos<br>con tu negocio?
+      ¿Cuál de estas soluciones<br>necesita tu negocio?
     </h2>
-    <p class="text-base mb-8" style="color: rgba(237,227,213,0.50);">
-      Te proponemos un plan claro con entregables reales — sin compromisos vacíos, sin relleno.
+    <p class="text-base mb-8 mx-auto" style="color: rgba(237,227,213,0.48); max-width: 46ch;">
+      En 30 minutos revisamos tu operación y te decimos exactamente qué resolvería más — sin compromiso.
     </p>
-    <a routerLink="/contact" class="btn-amber px-10 py-4 text-base font-bold">Agendar llamada →</a>
+    <a routerLink="/contact"
+       class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90"
+       style="background: #F59E0B; color: var(--coffee-dark);">
+      Agendar llamada gratuita →
+    </a>
   </div>
 </section>
 
 <style>
-  /* ── Flip cards ── */
-  .flip-card:hover .flip-inner {
-    transform: rotateY(180deg);
-  }
+  .flip-card:hover .flip-inner { transform: rotateY(180deg); }
 
-  /* ── Auto steps: aparecen uno por uno ── */
   .auto-step {
     opacity: 0;
     animation: autoStepIn 0.5s ease forwards;
   }
-
   @keyframes autoStepIn {
     from { opacity: 0; transform: translateX(-10px); }
     to   { opacity: 1; transform: translateX(0); }

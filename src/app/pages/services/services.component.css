@@ -1,53 +1,39 @@
-/* ── Pipeline pasos: entra secuencialmente ── */
-.pipeline-step {
+/* ── FadeUp (animaciones de entrada) ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-up {
   opacity: 0;
-  animation: pipelineIn 0.5s ease forwards;
+  animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) forwards;
 }
+.anim-delay-1 { animation-delay: 0.10s; }
+.anim-delay-2 { animation-delay: 0.22s; }
+.anim-delay-3 { animation-delay: 0.34s; }
+.anim-delay-4 { animation-delay: 0.46s; }
 
-@keyframes pipelineIn {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* ── Hover lift suave ── */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.25s ease;
 }
-
-/* ── Mini-diálogo aparición ── */
-@keyframes fadePopIn {
-  from {
-    opacity: 0;
-    transform: translateY(-50%) scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%) scale(1);
-  }
-}
-
-.animate-fadein {
-  animation: fadePopIn 0.18s ease forwards;
-}
-
-/* ── Tech card tooltip overflow visible ── */
-.tech-card {
-  overflow: visible !important;
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(59,46,42,0.10);
 }
 
 /* ── Flip cards ── */
-.flip-card {
-  cursor: pointer;
-}
-
+.flip-card { cursor: pointer; }
 .flip-card .flip-inner {
   transform-style: preserve-3d;
   transition: transform 0.55s ease;
 }
-
 .flip-card:hover .flip-inner {
   transform: rotateY(180deg);
+}
+.flip-front, .flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* ── Auto steps de automatización ── */
@@ -55,14 +41,12 @@
   opacity: 0;
   animation: autoStepIn 0.55s ease forwards;
 }
-
 @keyframes autoStepIn {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Nav anclas hover ── */
+a[href^="#"] {
+  scroll-behavior: smooth;
 }

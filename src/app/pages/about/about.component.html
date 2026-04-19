@@ -8,30 +8,33 @@
   <div class="absolute inset-0 pointer-events-none"
        style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E&quot;); opacity: 0.05; mix-blend-mode: overlay;"></div>
   <div class="absolute inset-0 pointer-events-none"
-       style="background: radial-gradient(ellipse 80% 60% at 30% -10%, rgba(245,158,11,0.18) 0%, transparent 65%);"></div>
+       style="background:
+         radial-gradient(ellipse 70% 55% at 30% -10%, rgba(245,158,11,0.16) 0%, transparent 60%),
+         radial-gradient(ellipse 40% 40% at 90% 90%,  rgba(245,158,11,0.05) 0%, transparent 55%);
+       "></div>
 
   <div class="container-melody max-w-4xl mx-auto">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
+    <div class="anim-fade-up anim-delay-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
          style="background: rgba(245,158,11,0.12); color: #FCD34D; border: 1px solid rgba(245,158,11,0.22);">
-      Nosotros
+      Quiénes somos
     </div>
     <h1
-      class="font-extrabold tracking-tight leading-[1.05] mb-6"
+      class="anim-fade-up anim-delay-2 font-extrabold tracking-tight leading-[1.05] mb-6"
       style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--bg-cream); letter-spacing: -0.03em; max-width: 20ch;"
     >
-      Hacemos que la IA<br>trabaje de verdad.
+      Construimos sistemas.<br>
+      <span style="color: #F59E0B;">No hacemos demos.</span>
     </h1>
-    <p class="text-lg leading-relaxed" style="color: rgba(237,227,213,0.55); max-width: 54ch;">
-      No vendemos demos. Construimos sistemas de inteligencia artificial que operan en producción, resuelven problemas reales y generan resultados medibles — desde el día uno.
+    <p class="anim-fade-up anim-delay-3 text-lg leading-relaxed"
+       style="color: rgba(237,227,213,0.55); max-width: 52ch;">
+      Melody es un equipo de ingeniería y diseño de sistemas que traduce problemas reales de operación en soluciones que ya están funcionando en producción.
     </p>
   </div>
 </section>
 
 
-
-
 <!-- ═══════════════════════════════════════════════════
-     QUIÉNES SOMOS — Historia editorial
+     QUIÉNES SOMOS
 ══════════════════════════════════════════════════ -->
 <section class="section-gap" style="background: var(--bg-cream);">
   <div class="container-melody">
@@ -41,48 +44,61 @@
         <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Por qué existe Melody</p>
         <h2
           class="font-extrabold leading-tight mb-6"
-          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+          style="font-size: clamp(1.75rem, 3.5vw, 2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
         >
-          La tecnología debe ayudarte a vender más, ordenar tu operación y trabajar mejor.
+          La tecnología debe servir<br>
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">para operar mejor, no para complicarse más.</span>
         </h2>
-        <div class="space-y-4 text-base leading-relaxed" style="color: var(--coffee-light);">
-          <p style="text-align: justify;">En Melody ayudamos a los negocios a usar inteligencia artificial, automatización y software de forma útil, no complicada.</p>
-          <p style="text-align: justify;">Creamos sistemas que conectan procesos, reducen trabajo manual y permiten que el negocio funcione con más orden, más control y mejor atención al cliente.</p>
-          <p style="text-align: justify;">No se trata de meter tecnología por meter. Se trata de construir soluciones que realmente ayuden a que tu empresa crezca y opere mejor.</p>
+        <div class="space-y-4 text-base leading-relaxed mb-8" style="color: var(--coffee-light);">
+          <p style="text-align: justify;">
+            Vimos cómo muchas empresas crecen con procesos rotos — hojas de cálculo, WhatsApp sin control, herramientas que no se conectan. No por falta de ganas, sino porque nadie construyó el sistema adecuado.
+          </p>
+          <p style="text-align: justify;">
+            Melody existe para eso. Diseñamos e implementamos sistemas integrados que ordenan la operación, automatizan lo repetitivo y dan a los equipos el control que necesitan para escalar.
+          </p>
+        </div>
+        <a routerLink="/contact"
+           class="inline-flex items-center gap-2 text-sm font-bold transition-all hover:gap-3"
+           style="color: var(--coffee-dark);">
+          Hablar con nosotros
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Lista de resultados numerados -->
+      <div class="reveal reveal-delay-2 space-y-0" style="border-top: 1px solid var(--border-warm);">
+        <div class="flex gap-5 py-6 hover-lift rounded-xl px-2 transition-all" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings:'tnum';">01</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Menos trabajo manual</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Automatizamos tareas repetitivas para que tu equipo se enfoque en lo que realmente genera valor.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6 hover-lift rounded-xl px-2 transition-all" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings:'tnum';">02</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Más orden y visibilidad</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Conectamos procesos, centralízamos información y damos control real sobre lo que pasa en tu negocio.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6 hover-lift rounded-xl px-2 transition-all" style="border-bottom: 1px solid var(--border-warm);">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings:'tnum';">03</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Mejor atención al cliente</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Sistemas que responden más rápido, con mejor contexto y sin depender de que alguien esté disponible.</p>
+          </div>
+        </div>
+        <div class="flex gap-5 py-6 hover-lift rounded-xl px-2 transition-all">
+          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings:'tnum';">04</div>
+          <div>
+            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Tecnología que encaja contigo</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">No adaptamos tu negocio al software. Construimos el software para la forma en que ya trabajas.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Beneficios como lista numerada -->
-      <div class="reveal reveal-delay-2 space-y-0" style="border-top: 1px solid var(--border-warm);">
-        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
-          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">01</div>
-          <div>
-            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Menos trabajo manual</h3>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Automatizamos tareas repetitivas para que tu equipo se enfoque en lo importante.</p>
-          </div>
-        </div>
-        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
-          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">02</div>
-          <div>
-            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Más orden en tu negocio</h3>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Conectamos procesos, información y herramientas para que todo trabaje mejor.</p>
-          </div>
-        </div>
-        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
-          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">03</div>
-          <div>
-            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Mejor atención al cliente</h3>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">Diseñamos soluciones que ayudan a responder más rápido y dar una experiencia más clara.</p>
-          </div>
-        </div>
-        <div class="flex gap-5 py-6" style="border-bottom: 1px solid var(--border-warm);">
-          <div class="text-2xl font-extrabold leading-none pt-0.5 shrink-0" style="color: rgba(59,46,42,0.12); font-feature-settings: 'tnum';">04</div>
-          <div>
-            <h3 class="font-bold mb-1" style="color: var(--coffee-dark);">Tecnología pensada para tu empresa</h3>
-            <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">No usamos soluciones genéricas. Adaptamos cada sistema a la forma en que tu negocio realmente opera.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -95,48 +111,48 @@
   <div class="container-melody">
     <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
 
-      <!-- Misión — dark -->
-      <div class="reveal rounded-3xl p-8 relative overflow-hidden"
+      <div class="reveal hover-lift rounded-3xl p-9 relative overflow-hidden"
            style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
         <div class="absolute top-0 right-0 pointer-events-none"
              style="background: radial-gradient(ellipse 60% 60% at 100% 0%, rgba(245,158,11,0.10) 0%, transparent 70%); width: 200px; height: 200px;"></div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">Misión</p>
-        <p class="text-xl font-bold leading-snug mb-4" style="color: var(--bg-cream);">
-          Diseñar e implementar sistemas inteligentes que automatizan lo que frena a las empresas — y liberan lo que las hace crecer.
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.28);">Misión</p>
+        <p class="text-xl font-bold leading-snug" style="color: var(--bg-cream);">
+          Diseñar sistemas que automatizan lo que frena a las empresas — y liberan lo que las hace crecer.
         </p>
       </div>
 
-      <!-- Visión — light -->
-      <div class="reveal reveal-delay-2 rounded-3xl p-8 relative overflow-hidden"
+      <div class="reveal reveal-delay-2 hover-lift rounded-3xl p-9 relative overflow-hidden"
            style="background: white; border: 1px solid var(--border-warm);">
         <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Visión</p>
-        <p class="text-xl font-bold leading-snug mb-4" style="color: var(--coffee-dark);">
-          Ser el equipo de IA al que acude Latinoamérica cuando quiere resultados — no experimentos.
+        <p class="text-xl font-bold leading-snug" style="color: var(--coffee-dark);">
+          Ser el equipo de sistemas al que acude Latinoamérica cuando quiere resultados — no experimentos.
         </p>
       </div>
+
     </div>
   </div>
 </section>
 
 
 <!-- ═══════════════════════════════════════════════════
-     VALORES
+     VALORES / FILOSOFÍA
 ══════════════════════════════════════════════════ -->
 <section class="section-gap" style="background: var(--bg-cream);">
   <div class="container-melody">
     <div class="mb-12 reveal">
       <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Cómo trabajamos</p>
       <h2 class="font-extrabold leading-tight"
-          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
-        Nuestra filosofía.
+          style="font-size: clamp(1.75rem, 3.5vw, 2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;">
+        Los principios que guían<br>cada proyecto.
       </h2>
     </div>
     <div class="grid sm:grid-cols-3 gap-5">
       <div *ngFor="let valor of valores; let i = index"
-           class="reveal rounded-3xl p-7"
+           class="reveal hover-lift rounded-3xl p-7"
            [class]="'reveal-delay-' + (i + 1)"
            style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-        <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-5 text-xl">{{valor.icon}}</div>
+        <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-5 text-xl"
+             style="background: rgba(59,46,42,0.06);">{{valor.icon}}</div>
         <h3 class="font-bold mb-2" style="color: var(--coffee-dark);">{{valor.title}}</h3>
         <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">{{valor.body}}</p>
       </div>
@@ -150,13 +166,19 @@
 ══════════════════════════════════════════════════ -->
 <section class="section-gap-sm" style="background: var(--coffee-dark);">
   <div class="container-melody max-w-3xl mx-auto text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.28);">El siguiente paso</p>
     <h2 class="font-extrabold leading-tight mb-4"
         style="font-size: clamp(1.75rem, 4vw, 3rem); color: var(--bg-cream); letter-spacing: -0.025em;">
-      ¿Listos para construir<br>algo que funcione?
+      ¿Tu operación tiene<br>
+      <span style="color: #F59E0B;">más potencial del que usas?</span>
     </h2>
-    <p class="text-base mb-8" style="color: rgba(237,227,213,0.50);">
-      30 minutos. Sin presentaciones genéricas. Solo un diagnóstico honesto de cómo la IA puede cambiar tu negocio.
+    <p class="text-base mb-8 mx-auto" style="color: rgba(237,227,213,0.48); max-width: 44ch;">
+      En 30 minutos revisamos tu operación y te damos un diagnóstico honesto. Sin presentación de ventas.
     </p>
-    <a routerLink="/contact" class="btn-amber px-10 py-4 text-base font-bold">Hablar con el equipo →</a>
+    <a routerLink="/contact"
+       class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90"
+       style="background: #F59E0B; color: var(--coffee-dark);">
+      Hablar con el equipo →
+    </a>
   </div>
 </section>

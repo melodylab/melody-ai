@@ -1,5 +1,5 @@
 <!-- ══════════════════════════════════════════════════
-     HERO — Full-screen, tipografía masiva
+     HERO — B2B, propuesta de valor directa
 ═══════════════════════════════════════════════════ -->
 <section
   class="relative overflow-hidden"
@@ -11,348 +11,385 @@
     padding-top: 5rem;
   "
 >
-  <!-- Noise grain texture (SVG filter) -->
+  <!-- Grain -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
        style="
          background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E&quot;);
-         opacity: 0.055;
-         mix-blend-mode: overlay;
+         opacity: 0.045; mix-blend-mode: overlay;
        "></div>
 
-  <!-- Gradiente multi-capa -->
+  <!-- Gradiente de profundidad -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
-       style="
-         background:
-           radial-gradient(ellipse 90% 55% at 50% -5%, rgba(245,158,11,0.22) 0%, transparent 65%),
-           radial-gradient(ellipse 50% 35% at 85% 80%, rgba(245,158,11,0.08) 0%, transparent 60%),
-           radial-gradient(ellipse 40% 30% at 10% 90%, rgba(120,80,40,0.12) 0%, transparent 55%);
+       style="background:
+         radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,158,11,0.18) 0%, transparent 60%),
+         radial-gradient(ellipse 40% 40% at 90% 90%,  rgba(245,158,11,0.06) 0%, transparent 55%);
        "></div>
 
   <!-- Grid decorativo -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
        style="
-         background-image: linear-gradient(rgba(237,227,213,0.04) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(237,227,213,0.04) 1px, transparent 1px);
+         background-image:
+           linear-gradient(rgba(237,227,213,0.03) 1px, transparent 1px),
+           linear-gradient(90deg, rgba(237,227,213,0.03) 1px, transparent 1px);
          background-size: 64px 64px;
-         mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+         mask-image: radial-gradient(ellipse 75% 75% at 50% 40%, black 0%, transparent 100%);
        "></div>
 
   <div class="relative container-melody text-center max-w-5xl mx-auto px-4">
 
-    <!-- Eyebrow -->
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-10"
-         style="background: rgba(245,158,11,0.12); color: #FCD34D; border: 1px solid rgba(245,158,11,0.22);">
-      <span class="h-1.5 w-1.5 rounded-full animate-pulse inline-block" style="background: #F59E0B;"></span>
-      IA, automatización y software para empresas
+    <!-- Eyebrow con dot pulsante -->
+    <div class="anim-fade-up anim-delay-1 inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest mb-8"
+         style="background: rgba(245,158,11,0.10); color: #FCD34D; border: 1px solid rgba(245,158,11,0.20);">
+      <span class="relative flex h-2 w-2">
+        <span class="dot-ring absolute inline-flex h-full w-full rounded-full"
+              style="background: rgba(245,158,11,0.5);"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2"
+              style="background: #F59E0B;"></span>
+      </span>
+      Sistemas conectados para empresas en crecimiento
     </div>
 
-    <!-- Headline principal -->
+    <!-- Headline — beneficio, no descripción -->
     <h1
-      class="font-extrabold tracking-tight leading-[1.05] mb-8"
-      style="
-        font-size: clamp(2.8rem, 8vw, 6.5rem);
-        color: var(--bg-cream);
-        letter-spacing: -0.03em;
-      "
+      class="anim-fade-up anim-delay-2 font-extrabold tracking-tight mb-6"
+      style="font-size: clamp(2.6rem, 7.5vw, 6rem); color: var(--bg-cream); letter-spacing: -0.035em; line-height: 1.02;"
     >
-      Sistemas inteligentes<br>
-      para que tu negocio<br>
-      <span
-        style="
-          background: linear-gradient(90deg, #F59E0B 0%, #FCD34D 50%, #F59E0B 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        "
-      >opere mejor.</span>
+      Tu operación,<br>
+      <span class="text-shimmer">ordenada, automatizada</span><br>
+      y lista para escalar.
     </h1>
 
-    <!-- Bajada -->
+    <!-- Subtítulo ejecutivo -->
     <p
-      class="mx-auto mb-12 text-lg leading-relaxed"
-      style="color: rgba(237,227,213,0.60); max-width: 56ch;"
+      class="anim-fade-up anim-delay-3 mx-auto mb-10 text-lg leading-relaxed"
+      style="color: rgba(237,227,213,0.58); max-width: 54ch;"
     >
-      En Melody diseñamos soluciones que integran inteligencia artificial, automatización y software a medida para ordenar procesos, reducir trabajo manual y ayudar a que las empresas crezcan con más control.
+      Melody construye sistemas que conectan procesos, eliminan trabajo manual y
+      dan a tu equipo el control que necesita para crecer sin perder el orden.
     </p>
 
     <!-- CTAs -->
-    <div class="flex flex-wrap items-center justify-center gap-4 mb-20">
-      <a routerLink="/contact" class="btn-amber px-8 py-4 text-base font-bold">
-        Agendar llamada →
+    <div class="anim-fade-up anim-delay-4 flex flex-wrap items-center justify-center gap-4 mb-16">
+      <a routerLink="/contact"
+         class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 active:scale-[0.98]"
+         style="background: #F59E0B; color: var(--coffee-dark);">
+        Hablar con nosotros
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
       </a>
-      <a
-        routerLink="/services"
-        class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all"
-        style="color: rgba(237,227,213,0.70); border: 1px solid rgba(237,227,213,0.15); backdrop-filter: blur(8px);"
-      >
-        Ver soluciones
+      <a routerLink="/services"
+         class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all hover:bg-white/5"
+         style="color: rgba(237,227,213,0.65); border: 1px solid rgba(237,227,213,0.14);">
+        Ver cómo lo hacemos
       </a>
     </div>
 
-    <!-- 3 indicadores de valor -->
-    <div
-      class="inline-flex flex-wrap items-center justify-center gap-0 rounded-2xl mx-auto"
-      style="background: rgba(237,227,213,0.04); border: 1px solid rgba(237,227,213,0.08);"
-    >
-      <div class="px-7 py-4 text-center">
-        <p class="text-xs font-semibold" style="color: rgba(237,227,213,0.85);">Soluciones conectadas</p>
-        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.35);">no piezas sueltas</p>
+    <!-- 3 pruebas de valor concretas -->
+    <div class="anim-fade-up anim-delay-5 inline-grid grid-cols-3 rounded-2xl overflow-hidden mx-auto"
+         style="border: 1px solid rgba(237,227,213,0.09); background: rgba(237,227,213,0.03);">
+      <div class="px-8 py-5 text-center">
+        <p class="text-xl font-extrabold mb-0.5 metric-num" style="color: var(--bg-cream);">3+</p>
+        <p class="text-xs leading-tight" style="color: rgba(237,227,213,0.35);">sistemas<br>en producción</p>
       </div>
-      <div class="px-7 py-4 text-center" style="border-left: 1px solid rgba(237,227,213,0.08);">
-        <p class="text-xs font-semibold" style="color: rgba(237,227,213,0.85);">IA · Automatización · Software</p>
-        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.35);">tres pilares, una solución</p>
+      <div class="px-8 py-5 text-center" style="border-left: 1px solid rgba(237,227,213,0.08); border-right: 1px solid rgba(237,227,213,0.08);">
+        <p class="text-xl font-extrabold mb-0.5 metric-num" style="color: #F59E0B;">100%</p>
+        <p class="text-xs leading-tight" style="color: rgba(237,227,213,0.35);">código<br>a medida</p>
       </div>
-      <div class="px-7 py-4 text-center" style="border-left: 1px solid rgba(237,227,213,0.08);">
-        <p class="text-xs font-semibold" style="color: rgba(237,227,213,0.85);">Hecho para negocios reales</p>
-        <p class="text-xs mt-0.5" style="color: rgba(237,227,213,0.35);">no demos, producción</p>
+      <div class="px-8 py-5 text-center">
+        <p class="text-xl font-extrabold mb-0.5 metric-num" style="color: var(--bg-cream);">0</p>
+        <p class="text-xs leading-tight" style="color: rgba(237,227,213,0.35);">plantillas<br>genéricas</p>
       </div>
     </div>
   </div>
 
-  <!-- Flecha scroll -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2" style="color: rgba(237,227,213,0.20);">
-    <svg class="h-5 w-5 animate-bounce" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+       style="color: rgba(237,227,213,0.18);">
+    <span class="text-xs uppercase tracking-widest font-medium">Scroll</span>
+    <svg class="h-4 w-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
     </svg>
   </div>
 </section>
 
 
-
-
 <!-- ══════════════════════════════════════════════════
-     POR QUÉ EXISTE MELODY
+     LO QUE HACEMOS — Narrativa del problema + solución
 ═══════════════════════════════════════════════════ -->
 <section class="section-gap" style="background: var(--bg-cream);">
   <div class="container-melody">
-    <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center reveal">
+    <div class="grid lg:grid-cols-2 gap-16 lg:gap-28 items-center">
 
-      <!-- Izquierda: texto editorial -->
-      <div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-6" style="color: var(--coffee-light);">Lo que hacemos</p>
+      <!-- Izquierda: copy editorial -->
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">El problema que resolvemos</p>
         <h2
-          class="font-extrabold leading-[1.1] mb-8"
-          style="font-size: clamp(1.9rem, 4vw, 3rem); color: var(--coffee-dark); letter-spacing: -0.025em;"
+          class="font-extrabold leading-[1.08] mb-7"
+          style="font-size: clamp(1.9rem, 3.8vw, 3rem); color: var(--coffee-dark); letter-spacing: -0.025em;"
         >
-          La mayoría de empresas ya usa herramientas.<br>
-          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">Pocas tienen un sistema que conecte todo.</span>
+          Las empresas crecen.<br>
+          <span style="color: var(--coffee-light); font-weight: 500; font-style: italic;">Sus sistemas, no.</span>
         </h2>
-        <div class="space-y-4 text-base leading-relaxed" style="color: var(--coffee-light); max-width: 52ch;">
-          <p style="text-align: justify;">Muchas operaciones crecen con procesos sueltos, tareas manuales y herramientas que no se hablan entre sí. Eso complica el control, frena al equipo y vuelve más difícil escalar.</p>
-          <p style="text-align: justify;">Melody nace para unir esas piezas en una sola solución con lógica, estructura y valor real para el negocio.</p>
+        <div class="space-y-4 mb-9 text-base leading-[1.7]" style="color: var(--coffee-light); max-width: 50ch;">
+          <p style="text-align: justify;">
+            Inventario en un lado, ventas en otro, atención en WhatsApp sin registro.
+            El equipo resuelve a mano lo que debería funcionar solo.
+          </p>
+          <p style="text-align: justify;">
+            Melody integra las piezas en un solo sistema con lógica, estructura y control real
+            — sin que tu equipo tenga que ser experto en tecnología.
+          </p>
         </div>
-        <div class="mt-10">
-          <a routerLink="/about" class="inline-flex items-center gap-2 text-sm font-semibold" style="color: var(--coffee-dark);">
-            Conocer Melody
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-          </a>
-        </div>
+        <a routerLink="/about"
+           class="inline-flex items-center gap-2 text-sm font-bold transition-all hover:gap-3"
+           style="color: var(--coffee-dark);">
+          Conocer cómo trabajamos
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
       </div>
 
-      <!-- Derecha: 3 pilares visuales -->
-      <div class="reveal reveal-delay-2 space-y-4">
-        <div class="flex items-start gap-5 rounded-2xl p-6" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-          <div class="h-9 w-9 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5" style="background: rgba(245,158,11,0.12);">
-            <svg class="h-4 w-4" style="color: #F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
-          </div>
-          <div>
-            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Inteligencia Artificial</p>
-            <p class="text-sm" style="color: var(--coffee-light);">Agentes conversacionales y modelos entrenados con el conocimiento de tu operación.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-5 rounded-2xl p-6" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-          <div class="h-9 w-9 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5" style="background: rgba(59,46,42,0.08);">
-            <svg class="h-4 w-4" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-          </div>
-          <div>
-            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Automatización</p>
-            <p class="text-sm" style="color: var(--coffee-light);">Procesos manuales convertidos en flujos automáticos que operan sin intervención.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-5 rounded-2xl p-6" style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-          <div class="h-9 w-9 rounded-xl flex-shrink-0 flex items-center justify-center mt-0.5" style="background: rgba(59,46,42,0.08);">
-            <svg class="h-4 w-4" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
-          </div>
-          <div>
-            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Software a medida</p>
-            <p class="text-sm" style="color: var(--coffee-light);">Plataformas y sistemas diseñados para la forma en que tu empresa realmente trabaja.</p>
-          </div>
-        </div>
-      </div>
+      <!-- Derecha: 3 capacidades como rows de valor -->
+      <div class="reveal reveal-delay-2 space-y-3">
 
+        <div class="hover-lift rounded-2xl p-6 flex items-start gap-5"
+             style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+               style="background: rgba(245,158,11,0.15);">
+            <svg class="h-5 w-5" style="color:#F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold mb-1" style="color: var(--bg-cream);">Inteligencia Artificial aplicada</p>
+            <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50);">
+              Agentes que atienden, responden y procesan — entrenados con el contexto real de tu negocio.
+            </p>
+          </div>
+        </div>
+
+        <div class="hover-lift rounded-2xl p-6 flex items-start gap-5"
+             style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+               style="background: rgba(59,46,42,0.08);">
+            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Automatización de procesos</p>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+              Lo que hoy hace una persona manualmente, mañana lo hace el sistema sin intervención.
+            </p>
+          </div>
+        </div>
+
+        <div class="hover-lift rounded-2xl p-6 flex items-start gap-5"
+             style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
+          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center"
+               style="background: rgba(59,46,42,0.08);">
+            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-bold mb-1" style="color: var(--coffee-dark);">Software que encaja en tu operación</p>
+            <p class="text-sm leading-relaxed" style="color: var(--coffee-light);">
+              No adaptamos tu negocio al software. Construimos el software para tu negocio.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
 
 
 <!-- ══════════════════════════════════════════════════
-     SERVICIOS — 4 bloques horizontales estilo "feature row"
+     SOLUCIONES — desde valor de negocio, no técnico
 ═══════════════════════════════════════════════════ -->
-<section class="section-gap" style="background: var(--bg-beige);">
+<section class="section-gap" style="background: var(--coffee-dark);">
   <div class="container-melody">
-    <div class="mb-14 reveal">
-      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Lo que construimos</p>
-      <h2
-        class="font-extrabold leading-tight"
-        style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
-      >
-        Tres pilares. Un sistema.
-      </h2>
+
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14 reveal">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(237,227,213,0.35);">Lo que construimos</p>
+        <h2
+          class="font-extrabold leading-tight"
+          style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--bg-cream); letter-spacing: -0.02em;"
+        >
+          Tres herramientas.<br>Un sistema integrado.
+        </h2>
+      </div>
+      <a routerLink="/services"
+         class="text-sm font-semibold shrink-0 transition-all hover:opacity-70"
+         style="color: #F59E0B;">
+        Ver todos los servicios →
+      </a>
     </div>
 
-    <!-- Grid 3 tarjetas grandes -->
-    <div class="grid md:grid-cols-3 gap-5">
+    <div class="grid md:grid-cols-3 gap-4">
 
       <!-- IA -->
-      <div class="reveal reveal-delay-1 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
-           style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.07);">
-        <div class="absolute top-0 right-0 w-48 h-48 rounded-full pointer-events-none"
-             style="background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+      <div class="reveal reveal-delay-1 hover-lift group rounded-3xl p-8 flex flex-col justify-between min-h-[340px] relative overflow-hidden cursor-default"
+           style="background: rgba(237,227,213,0.03); border: 1px solid rgba(237,227,213,0.07);">
+        <div class="absolute top-0 right-0 w-52 h-52 pointer-events-none"
+             style="background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%); transform: translate(30%,-30%);"></div>
         <div>
-          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
-               style="background: rgba(245,158,11,0.15);">
-            <svg class="h-5 w-5" style="color: #F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+          <div class="h-11 w-11 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(245,158,11,0.12);">
+            <svg class="h-5 w-5" style="color:#F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--bg-cream);">Inteligencia Artificial</h3>
-          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50); text-align: justify;">
-            Chatbots conversacionales, RAG sobre tus documentos, clasificación automática y modelos que aprenden de tus datos operacionales.
+          <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: rgba(237,227,213,0.30);">Inteligencia Artificial</p>
+          <h3 class="text-lg font-bold mb-3" style="color: var(--bg-cream);">Atención automática que vende y resuelve</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.48); text-align: justify;">
+            Agentes conversacionales para WhatsApp, web e Instagram que responden, califican leads y escalan al equipo humano cuando hace falta.
           </p>
         </div>
-        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: #FCD34D;">
-          Ver servicio
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <a routerLink="/services"
+           class="mt-8 inline-flex items-center gap-2 text-sm font-bold transition-all group-hover:gap-3"
+           style="color: #FCD34D;">
+          Explorar
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
         </a>
       </div>
 
       <!-- Automatización -->
-      <div class="reveal reveal-delay-2 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
-           style="background: white; border: 1px solid var(--border-warm);">
-        <div class="absolute -bottom-8 -right-8 w-40 h-40 rounded-full pointer-events-none"
-             style="background: radial-gradient(circle, rgba(59,46,42,0.06) 0%, transparent 70%);"></div>
+      <div class="reveal reveal-delay-2 hover-lift group rounded-3xl p-8 flex flex-col justify-between min-h-[340px] relative overflow-hidden cursor-default"
+           style="background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.12);">
         <div>
-          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
-               style="background: rgba(59,46,42,0.08);">
-            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+          <div class="h-11 w-11 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(245,158,11,0.15);">
+            <svg class="h-5 w-5" style="color:#F59E0B;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--coffee-dark);">Automatización</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">
-            Pipelines que extraen, transforman y enrutan información automáticamente. OCR, ETL, notificaciones y flujos de aprobación sin intervención humana.
+          <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: rgba(237,227,213,0.30);">Automatización</p>
+          <h3 class="text-lg font-bold mb-3" style="color: var(--bg-cream);">Procesos que corren solos, sin errores</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.48); text-align: justify;">
+            Flujos automáticos que reciben, procesan y distribuyen información sin intervención humana. Tu equipo hace lo que importa.
           </p>
         </div>
-        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: var(--coffee-dark);">
-          Ver servicio
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <a routerLink="/services"
+           class="mt-8 inline-flex items-center gap-2 text-sm font-bold transition-all group-hover:gap-3"
+           style="color: #FCD34D;">
+          Explorar
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
         </a>
       </div>
 
       <!-- Software -->
-      <div class="reveal reveal-delay-3 group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1"
-           style="background: var(--bg-sand); border: 1px solid var(--border-warm);">
-        <div class="absolute top-0 right-0 w-40 h-40 rounded-full pointer-events-none"
-             style="background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%); transform: translate(20%, -20%);"></div>
+      <div class="reveal reveal-delay-3 hover-lift group rounded-3xl p-8 flex flex-col justify-between min-h-[340px] relative overflow-hidden cursor-default"
+           style="background: rgba(237,227,213,0.03); border: 1px solid rgba(237,227,213,0.07);">
         <div>
-          <div class="h-10 w-10 rounded-xl flex items-center justify-center mb-6"
-               style="background: rgba(59,46,42,0.10);">
-            <svg class="h-5 w-5" style="color: var(--coffee);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+          <div class="h-11 w-11 rounded-xl flex items-center justify-center mb-6"
+               style="background: rgba(237,227,213,0.07);">
+            <svg class="h-5 w-5" style="color: rgba(237,227,213,0.6);" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3" style="color: var(--coffee-dark);">Software a medida</h3>
-          <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">
-            Aplicaciones web y móviles, microservicios, APIs e integraciones con CRM, ERP, pasarelas de pago y cualquier sistema que ya uses.
+          <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: rgba(237,227,213,0.30);">Software a medida</p>
+          <h3 class="text-lg font-bold mb-3" style="color: var(--bg-cream);">Una plataforma hecha para tu negocio</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.48); text-align: justify;">
+            Sistemas web y móviles que conectan tu operación desde adentro. Sin herramientas genéricas que no encajan con tu forma de trabajar.
           </p>
         </div>
-        <a routerLink="/services" class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold" style="color: var(--coffee-dark);">
-          Ver servicio
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <a routerLink="/services"
+           class="mt-8 inline-flex items-center gap-2 text-sm font-bold transition-all group-hover:gap-3"
+           style="color: #FCD34D;">
+          Explorar
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
           </svg>
         </a>
       </div>
+
     </div>
   </div>
 </section>
 
 
-
-
-
 <!-- ══════════════════════════════════════════════════
-     CASOS REALES
+     CASOS REALES — Prueba social con resultado implícito
 ═══════════════════════════════════════════════════ -->
-<section class="section-gap" style="background: var(--bg-beige);">
+<section class="section-gap" style="background: var(--bg-cream);">
   <div class="container-melody">
 
-    <div class="flex items-end justify-between gap-4 mb-12 reveal">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12 reveal">
       <div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Casos reales</p>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Clientes reales. Sistemas reales.</p>
         <h2
           class="font-extrabold leading-tight"
           style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
         >
-          Lo que hemos construido.
+          Lo que ya está funcionando.
         </h2>
       </div>
-      <a routerLink="/contact" class="btn-secondary text-sm shrink-0 hidden sm:inline-flex">Hablar con nosotros →</a>
+      <a routerLink="/contact" class="btn-secondary text-sm shrink-0 hidden sm:inline-flex">
+        Quiero algo así →
+      </a>
     </div>
 
-    <!-- Lista tipo tabla editorial -->
-    <div class="space-y-0" style="border-top: 1px solid var(--border-warm);">
+    <div style="border-top: 1px solid var(--border-warm);">
 
-      <!-- Caso 1 — Ala Menestra -->
-      <div class="reveal reveal-delay-1 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+      <!-- Ala Menestra -->
+      <div class="case-row reveal reveal-delay-1 flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 px-2"
            style="border-bottom: 1px solid var(--border-warm);">
-        <div class="flex items-center gap-5">
-          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+        <div class="flex items-start sm:items-center gap-5">
+          <div class="h-11 w-11 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
                style="background: var(--coffee-dark); color: var(--bg-cream);">AM</div>
           <div>
+            <p class="text-xs font-semibold uppercase tracking-widest mb-1" style="color: var(--coffee-light);">Restaurante · Quito</p>
             <h3 class="font-bold text-base" style="color: var(--coffee-dark);">Ala Menestra</h3>
-            <p class="text-sm" style="color: var(--coffee-light);">Solución para restaurantes que integra inventario, compras, control de desperdicio y ventas internas, para mantener una operación más ordenada y con mejor control del día a día.</p>
+            <p class="text-sm mt-1" style="color: var(--coffee-light);">Sistema de gestión que centraliza inventario, compras y control de merma. La cocina opera con menos desperdicio y sin hojas de Excel.</p>
           </div>
         </div>
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-2 shrink-0 flex-wrap">
           <span class="tag-amber">Automatización</span>
           <span class="tag-warm">Software propio</span>
         </div>
       </div>
 
-      <!-- Caso 2 — ChiliGums -->
-      <div class="reveal reveal-delay-2 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+      <!-- ChiliGums -->
+      <div class="case-row reveal reveal-delay-2 flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 px-2"
            style="border-bottom: 1px solid var(--border-warm);">
-        <div class="flex items-center gap-5">
-          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+        <div class="flex items-start sm:items-center gap-5">
+          <div class="h-11 w-11 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
                style="background: #7C3AED; color: white;">CG</div>
           <div>
+            <p class="text-xs font-semibold uppercase tracking-widest mb-1" style="color: var(--coffee-light);">Distribución · E-commerce</p>
             <h3 class="font-bold text-base" style="color: var(--coffee-dark);">ChiliGums</h3>
-            <p class="text-sm" style="color: var(--coffee-light);">Plataforma web y móvil para gestionar puntos de distribución y pedidos a domicilio, pensada para dar más visibilidad sobre la operación y mejorar la coordinación de entregas.</p>
+            <p class="text-sm mt-1" style="color: var(--coffee-light);">Plataforma omnicanal que conecta puntos físicos, delivery y pedidos P2P. Un solo lugar para gestionar toda la operación de ventas y entregas.</p>
           </div>
         </div>
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-2 shrink-0 flex-wrap">
           <span class="tag-warm">Desarrollo</span>
           <span class="tag-amber">Omnicanal</span>
         </div>
       </div>
 
-      <!-- Caso 3 — LogiPro -->
-      <div class="reveal reveal-delay-3 group flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 transition-colors cursor-default"
+      <!-- LogiPro -->
+      <div class="case-row reveal reveal-delay-3 flex flex-col sm:flex-row sm:items-center justify-between gap-6 py-7 px-2"
            style="border-bottom: 1px solid var(--border-warm);">
-        <div class="flex items-center gap-5">
-          <div class="h-10 w-10 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
+        <div class="flex items-start sm:items-center gap-5">
+          <div class="h-11 w-11 rounded-xl flex-shrink-0 flex items-center justify-center text-xs font-bold"
                style="background: #059669; color: white;">LP</div>
           <div>
+            <p class="text-xs font-semibold uppercase tracking-widest mb-1" style="color: var(--coffee-light);">Electrónica · Servicio técnico</p>
             <h3 class="font-bold text-base" style="color: var(--coffee-dark);">LogiPro</h3>
-            <p class="text-sm" style="color: var(--coffee-light);">Solución integral para la venta y reparación de equipos, complementada con un agente inteligente para atención, agendamiento y seguimiento de casos.</p>
+            <p class="text-sm mt-1" style="color: var(--coffee-light);">Sistema de reparación y ventas con agente IA integrado para atención, agendamiento y seguimiento de casos técnicos sin llamadas innecesarias.</p>
           </div>
         </div>
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-2 shrink-0 flex-wrap">
           <span class="tag-warm">Software propio</span>
           <span class="tag-amber">IA Conversacional</span>
         </div>
@@ -364,109 +401,106 @@
 
 
 <!-- ══════════════════════════════════════════════════
-     PROCESO — Cómo trabajamos
+     METODOLOGÍA — Como reducción de riesgo
 ═══════════════════════════════════════════════════ -->
-<section class="section-gap" style="background: var(--bg-cream);">
+<section class="section-gap" style="background: var(--bg-beige);">
   <div class="container-melody">
 
-    <!-- Header -->
     <div class="max-w-2xl mb-14 reveal">
-      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Cómo trabajamos</p>
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Cómo lo hacemos</p>
       <h2
         class="font-extrabold leading-tight mb-4"
-        style="font-size: clamp(1.75rem, 3.5vw, 2.75rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
+        style="font-size: clamp(1.75rem, 3.5vw, 2.6rem); color: var(--coffee-dark); letter-spacing: -0.02em;"
       >
-        Llevamos tu idea a una solución real en 3 pasos.
+        Sin riesgo de empezar. Sin sorpresas al terminar.
       </h2>
-      <p class="text-base leading-relaxed" style="color: var(--coffee-light); text-align: justify; max-width: 52ch;">
-        Un proceso claro para entender tu negocio, definir lo que realmente necesitas y construir una solución que sí funcione en la operación.
+      <p class="text-base leading-relaxed" style="color: var(--coffee-light); max-width: 54ch; text-align: justify;">
+        Antes de escribir una línea de código entendemos tu operación. El resultado es un sistema que ya sabe cómo trabaja tu empresa.
       </p>
     </div>
 
-    <!-- 3 cards -->
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-5">
 
       <!-- 01 -->
-      <div class="reveal reveal-delay-1 rounded-3xl p-8 flex flex-col justify-between min-h-[260px] relative overflow-hidden"
-           style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-        <div class="absolute top-4 right-6 text-7xl font-extrabold leading-none select-none pointer-events-none"
-             style="color: rgba(59,46,42,0.05); font-feature-settings: 'tnum';">01</div>
+      <div class="reveal reveal-delay-1 rounded-3xl p-8 flex flex-col justify-between min-h-[240px] relative overflow-hidden"
+           style="background: var(--bg-cream); border: 1px solid var(--border-warm);">
+        <div class="absolute top-5 right-6 text-6xl font-extrabold leading-none select-none pointer-events-none"
+             style="color: rgba(59,46,42,0.05); font-feature-settings:'tnum';">01</div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Paso 01</p>
-          <h3 class="text-lg font-bold mb-3" style="color: var(--coffee-dark);">Entendemos tu negocio</h3>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold mb-5"
+               style="background: rgba(59,46,42,0.07); color: var(--coffee-dark);">Diagnóstico</div>
+          <h3 class="text-base font-bold mb-2.5" style="color: var(--coffee-dark);">Entendemos tu operación</h3>
           <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">
-            Revisamos cómo opera tu empresa hoy, dónde hay tareas manuales, desorden o puntos de fricción, y detectamos qué vale la pena mejorar.
+            Mapeamos procesos, cuellos de botella e ineficiencias. Detectamos dónde hay más valor si se automatiza o conecta.
           </p>
         </div>
-        <div class="mt-6 pt-5" style="border-top: 1px solid var(--border-warm);">
-          <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Base clara desde el inicio</span>
-        </div>
+        <p class="text-xs font-semibold mt-5 pt-4" style="color: var(--coffee-dark); border-top: 1px solid var(--border-warm);">Base diagnóstica real</p>
       </div>
 
       <!-- 02 -->
-      <div class="reveal reveal-delay-2 rounded-3xl p-8 flex flex-col justify-between min-h-[260px] relative overflow-hidden"
+      <div class="reveal reveal-delay-2 rounded-3xl p-8 flex flex-col justify-between min-h-[240px] relative overflow-hidden"
            style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.07);">
-        <div class="absolute top-4 right-6 text-7xl font-extrabold leading-none select-none pointer-events-none"
-             style="color: rgba(237,227,213,0.04); font-feature-settings: 'tnum';">02</div>
+        <div class="absolute top-5 right-6 text-6xl font-extrabold leading-none select-none pointer-events-none"
+             style="color: rgba(237,227,213,0.04); font-feature-settings:'tnum';">02</div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(237,227,213,0.30);">Paso 02</p>
-          <h3 class="text-lg font-bold mb-3" style="color: var(--bg-cream);">Diseñamos la solución</h3>
-          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.55); text-align: justify;">
-            Definimos cómo debe funcionar la solución, qué procesos debe conectar y cómo se adapta a tu operación antes de empezar a construir.
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold mb-5"
+               style="background: rgba(245,158,11,0.15); color: #FCD34D;">Diseño</div>
+          <h3 class="text-base font-bold mb-2.5" style="color: var(--bg-cream);">Diseñamos la solución</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(237,227,213,0.50); text-align: justify;">
+            Definimos alcance, flujos, integraciones y entregables antes de construir. Sin humo, sin promesas abiertas.
           </p>
         </div>
-        <div class="mt-6 pt-5" style="border-top: 1px solid rgba(237,227,213,0.08);">
-          <span class="text-xs font-semibold" style="color: #F59E0B;">Todo pensado para tu realidad</span>
-        </div>
+        <p class="text-xs font-semibold mt-5 pt-4" style="color: #F59E0B; border-top: 1px solid rgba(237,227,213,0.08);">Propuesta con precio fijo</p>
       </div>
 
       <!-- 03 -->
-      <div class="reveal reveal-delay-3 rounded-3xl p-8 flex flex-col justify-between min-h-[260px] relative overflow-hidden"
-           style="background: var(--bg-beige); border: 1px solid var(--border-warm);">
-        <div class="absolute top-4 right-6 text-7xl font-extrabold leading-none select-none pointer-events-none"
-             style="color: rgba(59,46,42,0.05); font-feature-settings: 'tnum';">03</div>
+      <div class="reveal reveal-delay-3 rounded-3xl p-8 flex flex-col justify-between min-h-[240px] relative overflow-hidden"
+           style="background: var(--bg-cream); border: 1px solid var(--border-warm);">
+        <div class="absolute top-5 right-6 text-6xl font-extrabold leading-none select-none pointer-events-none"
+             style="color: rgba(59,46,42,0.05); font-feature-settings:'tnum';">03</div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--coffee-light);">Paso 03</p>
-          <h3 class="text-lg font-bold mb-3" style="color: var(--coffee-dark);">La construimos contigo</h3>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold mb-5"
+               style="background: rgba(59,46,42,0.07); color: var(--coffee-dark);">Construcción</div>
+          <h3 class="text-base font-bold mb-2.5" style="color: var(--coffee-dark);">Lo entregamos funcionando</h3>
           <p class="text-sm leading-relaxed" style="color: var(--coffee-light); text-align: justify;">
-            Desarrollamos, probamos y ajustamos la solución hasta dejarla lista para operar de forma clara, útil y alineada a tu negocio.
+            Iteramos con demos reales. Cuando cerramos, el sistema ya está en producción y tu equipo sabe usarlo.
           </p>
         </div>
-        <div class="mt-6 pt-5" style="border-top: 1px solid var(--border-warm);">
-          <span class="text-xs font-semibold" style="color: var(--coffee-dark);">Lista para usarse de verdad</span>
-        </div>
+        <p class="text-xs font-semibold mt-5 pt-4" style="color: var(--coffee-dark); border-top: 1px solid var(--border-warm);">En producción, no en demo</p>
       </div>
 
     </div>
 
-    <div class="mt-12 reveal">
-      <a routerLink="/contact" class="btn-primary px-10 py-4 text-base">
-        Empezar el proceso →
+    <div class="mt-10 reveal">
+      <a routerLink="/contact" class="btn-primary px-9 py-4 text-sm font-bold">
+        Agendar diagnóstico gratuito →
       </a>
     </div>
   </div>
 </section>
 
 
-
 <!-- ══════════════════════════════════════════════════
-     TESTIMONIO
+     TESTIMONIO — Prueba social anchor
 ═══════════════════════════════════════════════════ -->
-<section class="section-gap-sm" style="background: var(--bg-beige);">
+<section class="section-gap-sm" style="background: var(--bg-cream);">
   <div class="container-melody max-w-3xl mx-auto reveal">
-    <div class="rounded-3xl p-10 md:p-14" style="background: var(--coffee-dark);">
-      <svg class="h-7 w-7 mb-8 opacity-30" style="color: var(--bg-cream);" fill="currentColor" viewBox="0 0 32 32">
+    <div class="rounded-3xl p-10 md:p-14 relative overflow-hidden" style="background: var(--coffee-dark);">
+      <div class="absolute inset-0 pointer-events-none"
+           style="background: radial-gradient(ellipse 60% 50% at 80% 20%, rgba(245,158,11,0.07) 0%, transparent 70%);"></div>
+      <svg class="h-7 w-7 mb-8" style="color: rgba(245,158,11,0.4);" fill="currentColor" viewBox="0 0 32 32">
         <path d="M10 8C6.7 8 4 10.7 4 14v10h10V14H7.3C7.7 11.6 9.7 9.6 12 9.1L10 8zm16 0c-3.3 0-6 2.7-6 6v10h10V14h-6.7c.4-2.4 2.4-4.4 4.7-4.9L26 8z"/>
       </svg>
-      <blockquote class="text-xl md:text-2xl font-bold leading-snug mb-8" style="color: var(--bg-cream);">
+      <blockquote class="relative text-xl md:text-2xl font-bold leading-snug mb-8"
+                  style="color: var(--bg-cream);">
         "Melody no solo nos entregó software. Nos entregó un sistema que literalmente trabaja solo mientras nosotros nos enfocamos en crecer."
       </blockquote>
       <div class="flex items-center gap-3">
         <div class="h-9 w-9 rounded-full flex items-center justify-center text-xs font-bold"
-             style="background: rgba(237,227,213,0.12); color: var(--bg-cream);">CV</div>
+             style="background: rgba(237,227,213,0.10); color: var(--bg-cream);">CV</div>
         <div>
           <p class="text-sm font-semibold" style="color: var(--bg-cream);">Carlos Vásquez</p>
-          <p class="text-xs" style="color: rgba(237,227,213,0.45);">Fundador · Ala Menestra</p>
+          <p class="text-xs" style="color: rgba(237,227,213,0.40);">Fundador · Ala Menestra</p>
         </div>
       </div>
     </div>
@@ -475,33 +509,46 @@
 
 
 <!-- ══════════════════════════════════════════════════
-     CTA FINAL — full-width oscuro
+     CTA FINAL — Conversión directa
 ═══════════════════════════════════════════════════ -->
 <section class="section-gap-sm" style="background: var(--coffee-dark);">
-  <div class="container-melody max-w-4xl mx-auto text-center reveal">
+  <div class="container-melody max-w-4xl mx-auto text-center reveal relative">
 
     <div class="absolute inset-0 pointer-events-none"
-         style="background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(245,158,11,0.08) 0%, transparent 70%);"></div>
+         style="background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(245,158,11,0.09) 0%, transparent 65%);"></div>
+
+    <p class="relative text-xs font-semibold uppercase tracking-widest mb-6"
+       style="color: rgba(237,227,213,0.30);">El siguiente paso</p>
 
     <h2
-      class="relative font-extrabold leading-[1.05] mb-6"
-      style="font-size: clamp(2rem, 5vw, 4rem); color: var(--bg-cream); letter-spacing: -0.03em;"
+      class="relative font-extrabold leading-[1.05] mb-5"
+      style="font-size: clamp(2rem, 5vw, 3.75rem); color: var(--bg-cream); letter-spacing: -0.03em;"
     >
-      ¿Listo para construir<br>
-      <span style="color: #F59E0B;">algo inteligente?</span>
+      ¿Tu operación puede<br>
+      <span style="color: #F59E0B;">funcionar mejor?</span>
     </h2>
-    <p class="relative mb-10 text-base max-w-xl mx-auto" style="color: rgba(237,227,213,0.50);">
-      Agenda 30 minutos. Te proponemos un roadmap claro con entregables reales. Sin compromiso, sin promesas vacías.
+
+    <p class="relative mb-10 text-base max-w-lg mx-auto leading-relaxed"
+       style="color: rgba(237,227,213,0.48);">
+      En 30 minutos revisamos tu operación y te decimos si Melody puede ayudarte —
+      y cómo. Sin compromiso, sin presentación de ventas.
     </p>
+
     <div class="relative flex flex-wrap items-center justify-center gap-4">
-      <a routerLink="/contact" class="btn-amber px-10 py-4 text-base font-bold">
-        Agendar llamada →
+      <a routerLink="/contact"
+         class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 active:scale-[0.98]"
+         style="background: #F59E0B; color: var(--coffee-dark);">
+        Agendar llamada gratuita
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
       </a>
       <a routerLink="/services"
-         class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-medium text-sm transition-all"
-         style="color: rgba(237,227,213,0.55); border: 1px solid rgba(237,227,213,0.12);">
-        Ver servicios
+         class="inline-flex items-center gap-2 px-10 py-4 rounded-xl font-medium text-sm transition-all hover:bg-white/5"
+         style="color: rgba(237,227,213,0.50); border: 1px solid rgba(237,227,213,0.10);">
+        Ver soluciones
       </a>
     </div>
+
   </div>
 </section>
