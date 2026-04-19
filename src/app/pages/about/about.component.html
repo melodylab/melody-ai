@@ -111,22 +111,46 @@
   <div class="container-melody">
     <div class="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
 
-      <div class="reveal hover-lift rounded-3xl p-9 relative overflow-hidden"
-           style="background: var(--coffee-dark); border: 1px solid rgba(237,227,213,0.06);">
-        <div class="absolute top-0 right-0 pointer-events-none"
-             style="background: radial-gradient(ellipse 60% 60% at 100% 0%, rgba(245,158,11,0.10) 0%, transparent 70%); width: 200px; height: 200px;"></div>
-        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.28);">Misión</p>
-        <p class="text-xl font-bold leading-snug" style="color: var(--bg-cream);">
-          Diseñar sistemas que automatizan lo que frena a las empresas — y liberan lo que las hace crecer.
-        </p>
+      <!-- Misión — imagen + reveal de texto al hover -->
+      <div class="reveal mv-card rounded-3xl overflow-hidden relative"
+           style="min-height: 340px; cursor: default;">
+        <!-- Imagen de fondo -->
+        <img src="assets/images/mision.png" alt="Misión Melody"
+             class="mv-img absolute inset-0 w-full h-full object-cover transition-all duration-500">
+        <!-- Overlay oscuro base -->
+        <div class="mv-overlay absolute inset-0 transition-all duration-500"
+             style="background: rgba(28,18,12,0.38);"></div>
+        <!-- Label siempre visible -->
+        <div class="absolute top-7 left-7 z-10">
+          <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full"
+                style="background: rgba(245,158,11,0.18); color: #FCD34D; border: 1px solid rgba(245,158,11,0.25);">Misión</span>
+        </div>
+        <!-- Texto — aparece al hover -->
+        <div class="mv-text absolute inset-0 flex items-end p-8 z-10
+                    opacity-0 translate-y-3 transition-all duration-500">
+          <p class="text-base font-semibold leading-relaxed" style="color: var(--bg-cream);">
+            Ayudar a las empresas a evolucionar mediante soluciones tecnológicas e inteligencia artificial, diseñadas con criterio, propósito y enfoque en resultados reales, humanos y sostenibles.
+          </p>
+        </div>
       </div>
 
-      <div class="reveal reveal-delay-2 hover-lift rounded-3xl p-9 relative overflow-hidden"
-           style="background: white; border: 1px solid var(--border-warm);">
-        <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: var(--coffee-light);">Visión</p>
-        <p class="text-xl font-bold leading-snug" style="color: var(--coffee-dark);">
-          Ser el equipo de sistemas al que acude Latinoamérica cuando quiere resultados — no experimentos.
-        </p>
+      <!-- Visión — imagen + reveal de texto al hover -->
+      <div class="reveal reveal-delay-2 mv-card rounded-3xl overflow-hidden relative"
+           style="min-height: 340px; cursor: default;">
+        <img src="assets/images/vision.png" alt="Visión Melody"
+             class="mv-img absolute inset-0 w-full h-full object-cover transition-all duration-500">
+        <div class="mv-overlay absolute inset-0 transition-all duration-500"
+             style="background: rgba(28,18,12,0.38);"></div>
+        <div class="absolute top-7 left-7 z-10">
+          <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full"
+                style="background: rgba(245,158,11,0.18); color: #FCD34D; border: 1px solid rgba(245,158,11,0.25);">Visión</span>
+        </div>
+        <div class="mv-text absolute inset-0 flex items-end p-8 z-10
+                    opacity-0 translate-y-3 transition-all duration-500">
+          <p class="text-base font-semibold leading-relaxed" style="color: var(--bg-cream);">
+            Ser una empresa referente por la solidez de sus soluciones, la cercanía con sus clientes y su capacidad de convertir la tecnología en valor tangible para las personas y los negocios.
+          </p>
+        </div>
       </div>
 
     </div>
