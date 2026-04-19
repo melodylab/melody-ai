@@ -202,5 +202,16 @@
   animation-delay: var(--rag-delay, 0s), calc(var(--rag-delay, 0s) + 0.5s);
 }
 
+/* Ícono contenedor del pipeline RAG */
+.rag-icon {
+  height: 34px;
+  width: 34px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ── Nav anclas hover ── */
 a[href^="#"] { scroll-behavior: smooth; }
