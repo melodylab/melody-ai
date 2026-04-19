@@ -178,56 +178,54 @@
                style="background: radial-gradient(ellipse 60% 40% at 80% 80%, rgba(245,158,11,0.07) 0%, transparent 60%);"></div>
           <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">Cómo funciona una automatización</p>
 
-          <div class="auto-step flex items-center gap-4" style="animation-delay: 0s;">
-            <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(245,158,11,0.18); color: #F59E0B;">1</div>
-            <div class="flex-1 rounded-lg px-4 py-2.5"
-                 style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.20);">
-              <span class="text-sm font-medium" style="color: rgba(237,227,213,0.90);">Llega una solicitud o evento</span>
+          <!-- PIPELINE AUTOMATIZACION animado -->
+          <div class="pipe-step" style="--pipe-delay: 0s;">
+            <div class="pipe-connector-wrap">
+              <div class="pipe-num" style="background: rgba(245,158,11,0.18); color: #F59E0B;">1</div>
+              <div class="pipe-line"><div class="pipe-line-fill"></div></div>
+            </div>
+            <div class="pipe-row" style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.22);">
+              <span class="text-sm font-medium" style="color: rgba(237,227,213,0.92);">Llega una solicitud o evento</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;">
-            <div class="w-px h-4" style="background: rgba(245,158,11,0.25);"></div>
-          </div>
-          <div class="auto-step flex items-center gap-4" style="animation-delay: 0.6s;">
-            <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">2</div>
-            <div class="flex-1 rounded-lg px-4 py-2.5"
-                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
+
+          <div class="pipe-step" style="--pipe-delay: 0.7s;">
+            <div class="pipe-connector-wrap">
+              <div class="pipe-num pipe-num--dim">2</div>
+              <div class="pipe-line"><div class="pipe-line-fill" style="animation-delay: calc(var(--pipe-delay) + 0.2s);"></div></div>
+            </div>
+            <div class="pipe-row" style="background: rgba(237,227,213,0.04); border: 1px solid rgba(237,227,213,0.08);">
               <span class="text-sm" style="color: rgba(237,227,213,0.70);">El sistema organiza la información</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;">
-            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
-          </div>
-          <div class="auto-step flex items-center gap-4" style="animation-delay: 1.2s;">
-            <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">3</div>
-            <div class="flex-1 rounded-lg px-4 py-2.5"
-                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
+
+          <div class="pipe-step" style="--pipe-delay: 1.4s;">
+            <div class="pipe-connector-wrap">
+              <div class="pipe-num pipe-num--dim">3</div>
+              <div class="pipe-line"><div class="pipe-line-fill" style="animation-delay: calc(var(--pipe-delay) + 0.2s);"></div></div>
+            </div>
+            <div class="pipe-row" style="background: rgba(237,227,213,0.04); border: 1px solid rgba(237,227,213,0.08);">
               <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se envía al responsable correcto</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;">
-            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
-          </div>
-          <div class="auto-step flex items-center gap-4" style="animation-delay: 1.8s;">
-            <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(237,227,213,0.07); color: rgba(237,227,213,0.50);">4</div>
-            <div class="flex-1 rounded-lg px-4 py-2.5"
-                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
+
+          <div class="pipe-step" style="--pipe-delay: 2.1s;">
+            <div class="pipe-connector-wrap">
+              <div class="pipe-num pipe-num--dim">4</div>
+              <div class="pipe-line"><div class="pipe-line-fill" style="animation-delay: calc(var(--pipe-delay) + 0.2s);"></div></div>
+            </div>
+            <div class="pipe-row" style="background: rgba(237,227,213,0.04); border: 1px solid rgba(237,227,213,0.08);">
               <span class="text-sm" style="color: rgba(237,227,213,0.70);">Se registra y da seguimiento</span>
             </div>
           </div>
-          <div class="flex" style="padding-left:15px; margin: 4px 0;">
-            <div class="w-px h-4" style="background: rgba(237,227,213,0.12);"></div>
-          </div>
-          <div class="auto-step flex items-center gap-4" style="animation-delay: 2.4s;">
-            <div class="h-8 w-8 rounded-lg flex-shrink-0 grid place-items-center text-xs font-bold"
-                 style="background: rgba(245,158,11,0.18); color: #F59E0B;">✓</div>
-            <div class="flex-1 rounded-lg px-4 py-2.5"
-                 style="background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.18);">
-              <span class="text-sm font-semibold" style="color: rgba(237,227,213,0.90);">Resultado confirmado automáticamente</span>
+
+          <div class="pipe-step" style="--pipe-delay: 2.8s;">
+            <div class="pipe-connector-wrap">
+              <div class="pipe-num pipe-num--check">&#10003;</div>
+              <!-- sin línea en el último -->
+            </div>
+            <div class="pipe-row pipe-row--final" style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.22);">
+              <span class="text-sm font-semibold" style="color: rgba(237,227,213,0.92);">Resultado confirmado automáticamente</span>
             </div>
           </div>
 
@@ -472,31 +470,44 @@
           <div class="absolute inset-0 pointer-events-none"
                style="background: radial-gradient(ellipse 60% 50% at 20% 20%, rgba(245,158,11,0.09) 0%, transparent 60%);"></div>
           <p class="text-xs font-semibold uppercase tracking-wider mb-6" style="color: rgba(237,227,213,0.30);">Cómo usa Melody tu conocimiento</p>
-          <div class="space-y-3">
+          <!-- PIPELINE RAG animado -->
+          <div class="rag-step" style="--rag-delay: 0.1s;">
             <div class="rounded-xl p-4 flex items-center gap-3"
-                 style="background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.15);">
-              <span style="color: #F59E0B; font-size: 1.1rem;">📄</span>
+                 style="background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.18);">
+              <span style="color: #F59E0B; font-size: 1.15rem; flex-shrink:0;">&#128196;</span>
               <div>
-                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Tu base de conocimiento</p>
-                <p class="text-xs" style="color: rgba(237,227,213,0.40);">Documentos, manuales, catálogos, historial</p>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.88);">Tu base de conocimiento</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.38);">Documentos, manuales, catálogos, historial</p>
               </div>
             </div>
-            <div class="text-center text-xs py-1" style="color: rgba(237,227,213,0.20);">↓ procesamos y vectorizamos</div>
+          </div>
+
+          <div class="rag-arrow" style="--rag-delay: 0.5s;">
+            <span style="color: rgba(237,227,213,0.22); font-size: 0.65rem; letter-spacing:0.06em;">&#8595; procesamos y vectorizamos</span>
+          </div>
+
+          <div class="rag-step" style="--rag-delay: 0.9s;">
             <div class="rounded-xl p-4 flex items-center gap-3"
-                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span style="font-size: 1.1rem;">🔍</span>
+                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.09);">
+              <span style="font-size: 1.15rem; flex-shrink:0;">&#128269;</span>
               <div>
-                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Búsqueda semántica</p>
-                <p class="text-xs" style="color: rgba(237,227,213,0.40);">El modelo entiende el contexto, no solo palabras clave</p>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.88);">Búsqueda semántica</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.38);">El modelo entiende el contexto, no solo palabras clave</p>
               </div>
             </div>
-            <div class="text-center text-xs py-1" style="color: rgba(237,227,213,0.20);">↓ respuesta contextual</div>
+          </div>
+
+          <div class="rag-arrow" style="--rag-delay: 1.3s;">
+            <span style="color: rgba(237,227,213,0.22); font-size: 0.65rem; letter-spacing:0.06em;">&#8595; respuesta contextual</span>
+          </div>
+
+          <div class="rag-step" style="--rag-delay: 1.7s;">
             <div class="rounded-xl p-4 flex items-center gap-3"
-                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.08);">
-              <span style="font-size: 1.1rem;">🤖</span>
+                 style="background: rgba(237,227,213,0.05); border: 1px solid rgba(237,227,213,0.09);">
+              <span style="font-size: 1.15rem; flex-shrink:0;">&#129302;</span>
               <div>
-                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.85);">Respuesta precisa y verificable</p>
-                <p class="text-xs" style="color: rgba(237,227,213,0.40);">Sin inventar. Citando tu fuente de verdad.</p>
+                <p class="text-xs font-semibold mb-0.5" style="color: rgba(237,227,213,0.88);">Respuesta precisa y verificable</p>
+                <p class="text-xs" style="color: rgba(237,227,213,0.38);">Sin inventar. Citando tu fuente de verdad.</p>
               </div>
             </div>
           </div>
