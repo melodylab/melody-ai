@@ -1,8 +1,8 @@
-<footer style="background: var(--coffee-dark); color: var(--bg-beige);">
+<footer style="background: var(--coffee-dark); color: var(--bg-beige); overflow: hidden;">
 
   <!-- Pre-footer: CTA strip -->
   <div style="background: rgba(245,158,11,0.06); border-top: 1px solid rgba(245,158,11,0.12); border-bottom: 1px solid rgba(237,227,213,0.06);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="footer-inner py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-sm font-medium text-center sm:text-left" style="color: rgba(237,227,213,0.60);">
         ¿Listo para construir algo inteligente? Cuéntanos tu proyecto.
       </p>
@@ -11,20 +11,20 @@
   </div>
 
   <!-- Main footer grid -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12"
-         style="border-bottom: 1px solid rgba(237,227,213,0.08);">
+  <div class="footer-inner pt-14 pb-8">
+    <div class="footer-grid pb-12" style="border-bottom: 1px solid rgba(237,227,213,0.08);">
 
       <!-- Brand -->
-      <div class="md:col-span-4 lg:col-span-5">
+      <div>
         <div class="flex items-center gap-2.5 mb-4">
-          <div class="h-8 w-8 rounded-lg flex items-center justify-center text-white font-bold text-sm"
+          <div class="h-8 w-8 rounded-lg flex items-center justify-center font-bold text-sm"
                style="background: var(--accent-amber); color: var(--coffee-dark);">M</div>
           <span class="text-lg font-bold tracking-tight" style="color: var(--bg-cream);">Melody</span>
-          <span class="text-xs px-2 py-0.5 rounded-full" style="background: rgba(245,158,11,0.15); color: #FCD34D; border: 1px solid rgba(245,158,11,0.20);">AI Company</span>
+          <span class="text-xs px-2 py-0.5 rounded-full"
+                style="background: rgba(245,158,11,0.15); color: #FCD34D; border: 1px solid rgba(245,158,11,0.20);">AI Company</span>
         </div>
-        <p class="text-sm leading-relaxed mb-6" style="color: rgba(237,227,213,0.50); max-width: 32ch;">
-          Sistemas inteligentes que piensan, deciden y evolucionan. Ecuador · Latinoamérica.
+        <p class="text-sm leading-relaxed mb-6" style="color: rgba(237,227,213,0.45); max-width: 28ch;">
+          Sistemas inteligentes que conectan, automatizan y evolucionan con tu negocio.
         </p>
         <!-- Social -->
         <div class="flex items-center gap-2.5">
@@ -47,8 +47,8 @@
         </div>
       </div>
 
-      <!-- Nav: Empresa -->
-      <div class="md:col-span-2">
+      <!-- Empresa -->
+      <div>
         <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">Empresa</p>
         <ul class="space-y-3">
           <li><a routerLink="/" class="footer-link">Inicio</a></li>
@@ -57,19 +57,19 @@
         </ul>
       </div>
 
-      <!-- Nav: Servicios -->
-      <div class="md:col-span-3">
+      <!-- Servicios -->
+      <div>
         <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">Servicios</p>
         <ul class="space-y-3">
-          <li><a routerLink="/services" fragment="ia-conversacional" class="footer-link">Agentes de IA Conversacional</a></li>
-          <li><a routerLink="/services" fragment="automatizacion" class="footer-link">Automatización de Procesos</a></li>
+          <li><a routerLink="/services" fragment="ia-conversacional" class="footer-link">Agentes de IA</a></li>
+          <li><a routerLink="/services" fragment="automatizacion" class="footer-link">Automatización</a></li>
           <li><a routerLink="/services" fragment="software" class="footer-link">Software a Medida</a></li>
           <li><a routerLink="/services" fragment="rag" class="footer-link">IA Aplicada &amp; RAG</a></li>
         </ul>
       </div>
 
-      <!-- Contacto directo -->
-      <div class="md:col-span-3 lg:col-span-2">
+      <!-- Contacto -->
+      <div>
         <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: rgba(237,227,213,0.30);">Contacto</p>
         <ul class="space-y-3">
           <li>
@@ -90,16 +90,45 @@
           </li>
         </ul>
       </div>
+
     </div>
 
     <!-- Bottom bar -->
+    <div class="pt-6">
       <p class="text-xs" style="color: rgba(237,227,213,0.25);">
         &copy; 2025 Melody &middot; Tecnolog&iacute;a con prop&oacute;sito
       </p>
+    </div>
+
   </div>
+
 </footer>
 
 <style>
+  /* Contenedor centrado del footer — sin usar max-w-7xl de Tailwind */
+  .footer-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  /* Grid de 4 columnas en desktop, 2 en tablet, 1 en móvil */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media (min-width: 640px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.4fr; }
+  }
+
   .footer-link {
     font-size: 0.875rem;
     color: rgba(237,227,213,0.50);
@@ -121,6 +150,7 @@
     background: rgba(237,227,213,0.06);
     border: 1px solid rgba(237,227,213,0.08);
     transition: background 150ms, color 150ms, border-color 150ms;
+    flex-shrink: 0;
   }
   .footer-social:hover {
     color: #FCD34D;
