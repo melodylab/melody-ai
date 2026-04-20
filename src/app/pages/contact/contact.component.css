@@ -1,0 +1,66 @@
+/* ══════════════════════════════════════════════
+   CONTACT HERO — Trust row
+══════════════════════════════════════════════ */
+
+/* Fila de garantías bajo el hero */
+.contact-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  background: rgba(237,227,213,0.04);
+  border: 1px solid rgba(237,227,213,0.08);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.contact-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.contact-trust-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.contact-trust-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(237,227,213,0.85);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.contact-trust-sub {
+  font-size: 0.7rem;
+  color: rgba(237,227,213,0.35);
+  margin: 0;
+  margin-top: 2px;
+}
+
+.contact-trust-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(237,227,213,0.10);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .contact-trust-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .contact-trust-divider { display: none; }
+  .contact-trust-item { padding: 0; }
+}
